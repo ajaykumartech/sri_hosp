@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import dnalogo from "../../Assets/Images/hero.png";
+import dnalogo from "../../Assets/Images/muscleman.png";
 import "./Home.css";
 import Contact from "../Contact/Contact";
 import Intro from "../Intro/Intro";

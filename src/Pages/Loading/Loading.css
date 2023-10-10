@@ -1,0 +1,107 @@
+/* LoadingComponent.css */
+.loading-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .screens {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation-duration: 2s; /* Adjust the animation duration as needed */
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Define animations for each screen */
+  .screens1 {
+    background-color: #fff;
+    color: #252525;
+    animation-name: fade-in;
+  }
+  
+  .screens2 {
+    background-color: #fff;
+    color: #252525;
+    animation: slide-up 2s ease-in-out both;
+  }
+  
+  .screens3 {
+    background-color: #fff;
+    color: #252525;
+    animation-name: fade-in;
+  }
+  
+  .screens4 {
+    background-color: #fff;
+    color: #252525;
+    animation: slide-down 2s ease-in-out both;
+  }
+  .screens5 {
+    background-color: #FFF8F1 ;
+  }
+  .screens6 {
+    background-color: #FFF8F1 ;
+    height: auto;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-up {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      60% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      75% {
+        transform: translateY(-20px);
+      }
+      90% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(0);
+      }
+  }
+
+  @keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      40% {
+        transform: translateY(20px);
+      }
+      60% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      75% {
+        transform: translateY(-10px);
+      }
+      90% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(0);
+      }
+  }
+  
