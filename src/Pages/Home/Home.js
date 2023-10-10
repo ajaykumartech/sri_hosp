@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header/Header";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import dnalogo from "../../Assets/Images/muscleman.png";
 import "./Home.css";
@@ -18,7 +17,7 @@ function Home() {
     <>
     <div className="main_container">
       <Row>
-        <Header />
+        {/* <Header /> */}
       </Row>
       <Container fluid>
         <Row>
