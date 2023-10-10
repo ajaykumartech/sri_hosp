@@ -1,0 +1,13 @@
+.scroll_textCont {
+  text-align: center;
+  margin: 207px 0 107px 0;
+}
+
+.scrollText {
+   /* Headings/H1/SemiBold */
+font-family: Outfit;
+font-size: 151px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 151px */ 
+}

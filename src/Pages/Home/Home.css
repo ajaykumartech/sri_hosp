@@ -1,0 +1,93 @@
+.main_container {
+  margin: 0 3%;
+}
+.main_heading {
+  color: var(--text-icon-light-heading, #252525);
+  /* Headings/H2/Regular */
+  font-family: Outfit;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 120px */
+}
+
+.main_text {
+  color: var(--text-icon-light-body, #3f454d);
+  /* Body/TextL/Regular */
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  letter-spacing: 0.48px;
+}
+.main_Btn {
+  border-radius: 8px;
+  background: var(--grey-1000, #252525);
+  display: flex;
+  padding: 20px 30px 22px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main_img {
+  height: 800px;
+  flex-shrink: 0;
+}
+/* Default styles for all screen sizes */
+
+/* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
+@media (max-width: 767px) {
+  /* Your CSS rules for mobile devices go here */
+  .main_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
+}
+
+/* Styles for screens with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Your CSS rules for tablets go here */
+  .main_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
+}
+
+/* Styles for screens with a minimum width of 992px and a maximum width of 1199px (e.g., small desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Your CSS rules for small desktops go here */
+  .main_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
+}
+
+/* Styles for screens with a minimum width of 1200px and above (e.g., large desktops) */
+@media (min-width: 1200px) {
+  /* Your CSS rules for large desktops go here */
+  .main_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
+}
