@@ -77,14 +77,30 @@
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 36px */
+  text-align: left;
+}
+.service_button1 {
+  justify-content: flex-end;
+  background-color: #fff8f1;
+  padding: 13px 13px;
+  color: var(--text-icon-light-heading, #252525);
+  /* Button/btn-text/Large/Regular */
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 33px */
+  letter-spacing: 0.44px;
+  margin: 15px 0;
 }
 
 .centered_img {
   display: block;
   margin: 0 auto; /* Horizontally center the image */
   text-align: center;
-  width: 100%;
+  width: 90%;
   height: auto;
+  padding: 0px;
 }
 .sec_subhead {
   color: var(--text-icon-light-heading, #252525);
@@ -128,4 +144,5 @@ li p {
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 93px */
+  margin: 16px 0;
 }

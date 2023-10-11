@@ -9,6 +9,7 @@ import Opthalmology from './Pages/Opthalmology/Opthalmology';
 import Insurance from './Pages/Insurance/Insurance';
 import Appointment from './Pages/Appointment/Appointment';
 import Loading from './Pages/Loading/Loading';
+import PageNotFound from './Pages/PageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/opthalmology" Component={Opthalmology} />
         <Route path="/insurance" Component={Insurance} />
         <Route path="/book_an_appointment" Component={Appointment} />
+        <Route path="*" Component={PageNotFound} />
        </Routes>
     </BrowserRouter>
     </>

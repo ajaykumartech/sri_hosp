@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Container, Image} from "react-bootstrap";
 import "./Footer.css";
 import insta from "../../Assets/Images/insta.png";
 import watsapp from "../../Assets/Images/watsapp.png";
@@ -12,53 +12,15 @@ function Footer() {
   return (
     <div className="footer_container">
       <Container fluid>
-        <Row>
-          <Col>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-              }}
-            >
+        <div className="stylingCon">
+          <div className="fir_div">
+          <div className="get_touch_cont">
               <h3 className="get_toch">Get in Touch</h3>{" "}
               <span>
                 <Image className="arrow_img" src={arrow} />
               </span>
-            </div>
-          </Col>
-          <Col style={{ alignItems: "flex-end" }}>
-            <Row>
-              <Col></Col>
-              <Col>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>
-                    <Image style={{ marginTop: "70px" }} src={fb} alt="fb" />
-                  </div>
-                  <div>
-                    <Image
-                      style={{ marginTop: "70px" }}
-                      src={insta}
-                      alt="insta"
-                    />
-                  </div>
-                  <div>
-                    <Image
-                      style={{ marginTop: "70px" }}
-                      src={watsapp}
-                      alt="watsapp"
-                    />
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row className="footer_downcontainer">
-          <Col>
-            <div>
+            </div> 
+            <div style={{marginTop:"44px"}}>
               <h3 className="footer_subtext">
                 Sri Chaitanya Ortho & Eye Hospital
               </h3>
@@ -68,12 +30,32 @@ function Footer() {
               </p>
               <p id="p">Tanuku, Andhra pradesh</p>
             </div>
-          </Col>
-          <Col>
-            <Row>
-              <Col></Col>
-              <Col>
-                <div
+
+          </div>
+          <div className="sec_div">
+          <div
+                  style={{ display: "flex", justifyContent:"space-between" }}
+                >
+                  <div>
+                    <Image style={{ marginTop: "50px" }} src={fb} alt="fb" />
+                  </div>
+                  <div>
+                    <Image
+                      style={{ marginTop: "50px" }}
+                      src={insta}
+                      alt="insta"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      style={{ marginTop: "50px" }}
+                      src={watsapp}
+                      alt="watsapp"
+                    />
+                  </div>
+                </div>
+  <div>
+  <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -84,7 +66,7 @@ function Footer() {
                     style={{
                       width: "23px",
                       height: "32px",
-                      marginRight: "10px",
+                      marginRight: "30px",
                     }}
                   >
                     <Image src={phone} alt="WhatsApp" />
@@ -104,7 +86,7 @@ function Footer() {
                     style={{
                       width: "23px",
                       height: "23px",
-                      marginRight: "10px",
+                      marginRight: "30px",
                     }}
                   ></div>
                   <div>
@@ -112,6 +94,7 @@ function Footer() {
                     <p id="p"> 08819-224456</p>
                   </div>
                 </div>
+  </div>
                 <div
                   style={{
                     display: "flex",
@@ -123,7 +106,7 @@ function Footer() {
                     style={{
                       width: "23px",
                       height: "23px",
-                      marginRight: "10px",
+                      marginRight: "30px",
                     }}
                   >
                     {" "}
@@ -136,10 +119,11 @@ function Footer() {
                 </div>
 
                 <p id="p1">@2023 All Rights Reserved</p>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+
+
+          </div>
+        </div>
+       
       </Container>
     </div>
   );

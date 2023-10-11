@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import dnalogo from "../../Assets/Images/muscleman.png";
 import "./Home.css";
@@ -11,8 +11,14 @@ import Footer from "../Footer/Footer";
 import Scroll from "../ScrollScreen/Scroll";
 import ScrollText from "../ScrollText/ScrollText";
 import Testmonial from "../Testmonials/Testmonial";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate =useNavigate();
+  useEffect(() => {
+    // This code will run when the component is mounted
+    window.scrollTo(0, 0); // Reset scroll position to the top
+  }, []);
   return (
     <>
     <div className="main_container">
@@ -30,7 +36,7 @@ function Home() {
                 Empowering You with Resilient Bones and Vision Clarity Beyond
                 Limits
               </p>
-              <Button className="main_Btn">Book an Appointment</Button>
+              <Button onClick={()=>{navigate('/book_an_appointment')}} className="main_Btn">Book an Appointment</Button>
             </div>
           </Col>
           <Col md={4}>

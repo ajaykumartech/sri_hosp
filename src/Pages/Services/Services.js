@@ -5,8 +5,10 @@ import optha from "../../Assets/Images/optha.png";
 import neuro from "../../Assets/Images/neuro.png";
 
 import "./Services.css";
+import { useNavigate } from "react-router-dom";
 
 function Services() {
+  const navigate =useNavigate();
   return (
     <div className="service_container">
       <div>
@@ -45,7 +47,7 @@ function Services() {
                       care.
                     </p>
                   </Row>
-                  <Button className="viewmore_btn" variant="outline-dark">
+                  <Button onClick={()=>{navigate('/orthopaedics')}} className="viewmore_btn" variant="outline-dark">
                     View Services
                   </Button>
                 </Col>
@@ -73,7 +75,7 @@ function Services() {
                       your vision. Your sight is our priority.
                     </p>
                   </Row>
-                  <Button className="viewmore_btn" variant="outline-dark">
+                  <Button onClick={()=>{navigate('/opthalmology')}} className="viewmore_btn" variant="outline-dark">
                     View Services
                   </Button>
                 </Col>
@@ -101,7 +103,7 @@ function Services() {
                       ensuring the best possible outcomes for our patients.
                     </p>
                   </Row>
-                  <Button className="viewmore_btn" variant="outline-dark">
+                  <Button onClick={()=>{navigate('/neurology')}} className="viewmore_btn" variant="outline-dark">
                     View Services
                   </Button>
                 </Col>
