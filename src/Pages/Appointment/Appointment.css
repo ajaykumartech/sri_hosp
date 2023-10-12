@@ -166,3 +166,69 @@
   font-weight: 600;
   line-height: 100%; /* 36px */
 }
+
+@media (max-width: 767px) {
+  /* Your CSS rules for mobile devices go here */
+  .app_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H3/Regular */
+    font-family: Outfit;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 93px */
+    text-align: center;
+    margin: 72px 0 18px 0;
+  }
+  
+  .app_sub_p {
+    color: var(--text-icon-light-body, #3f454d);
+    text-align: center;
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+  }
+  .app_text_p{
+    color: var(--text-icon-light-body, #3f454d);
+    text-align: center;
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 20% 94px 20%;
+  }
+  .app_addr_p {
+    color: var(--text-icon-light-body, #3f454d);
+  
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+  }
+  .app_addr_h {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H5/SemiBold */
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 36px */
+  }
+}

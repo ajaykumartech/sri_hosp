@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import check from "../../Assets/Images/contact/contact1.jpg";
 import hall from "../../Assets/Images/contact/contact2.jpg";
@@ -25,6 +25,10 @@ function Appointment() {
     message: "",
   });
 
+  useEffect(() => {
+    // This code will run when the component is mounted
+    window.scrollTo(0, 0); // Reset scroll position to the top
+  }, []);
   // Handle form input changes
   const handleInputChange = (event) => {
     event.preventDefault();
@@ -57,7 +61,7 @@ function Appointment() {
       <div className="appointment_container">
         <h1 className="app_heading">Contact Us</h1>
         <div className="app_sub_p">
-          <p>
+          <p className="app_text_p">
             Reach out to us today to schedule an appointment, inquire about our
             services, or simply get in touch. Our friendly team is here to
             assist you promptly.

@@ -63,7 +63,8 @@
 }
 
 .service_button {
-  width: 100%;
+  max-width: 70%;
+  margin-right: 224px;
   justify-content: flex-end;
   background-color: #fff8f1;
   padding: 13px 0px;
@@ -94,9 +95,9 @@
   margin: 15px 0;
 }
 
-.centered_img {
+.orthocentered_img {
   display: block;
-  margin: 0 auto; /* Horizontally center the image */
+  margin: auto; /* Horizontally center the image */
   text-align: center;
   width: 90%;
   height: auto;
@@ -124,7 +125,7 @@ li p {
   letter-spacing: 0.48px;
 }
 
-.sect_heading {
+.orthosect_heading {
   color: var(--text-icon-light-heading, #252525);
 
   /* Headings/H4/Medium */
@@ -135,7 +136,7 @@ li p {
   line-height: 100%; /* 58px */
   margin-bottom: 40px;
 }
-.spect_heading {
+.orthospect_heading {
   color: var(--text-icon-light-heading, #252525);
 
   /* Headings/H3/Regular */
@@ -145,4 +146,126 @@ li p {
   font-weight: 400;
   line-height: 100%; /* 93px */
   margin: 16px 0;
+}
+
+.sections_div  {
+  margin:160px 0px;
+}
+
+/* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
+@media (max-width: 767px) {
+  /* Your CSS rules for mobile devices go here */
+  .ortho_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
+  .ortho_servicehead {
+    color: var(--text-icon-light-heading, #252525);
+  
+    /* Headings/H4/Regular */
+    font-family: Outfit;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 58px */
+  }
+  .sections_div  {
+    margin:80px 0px;
+  }
+  
+  .service_button{
+    max-width: 70%;
+    margin-right: 224px;
+    justify-content: flex-end;
+    background-color: #fff8f1;
+    padding: 13px 0px;
+    border-bottom: 1px solid var(--neutral-800, #e5e5e7);
+    outline-style: hidden;
+    margin: 50px 0 0px 0px;
+    color: var(--text-icon-light-body, #3f454d);
+    /* Headings/H5/Regular */
+    font-family: Outfit;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 36px */
+    text-align: left;
+  }
+  .orthosect_heading {
+    color: var(--text-icon-light-heading, #252525);
+  
+    /* Headings/H4/Medium */
+    font-family: Outfit;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 58px */
+    margin-bottom: 40px;
+  }
+  .orthospect_heading {
+    color: var(--text-icon-light-heading, #252525);
+  
+    /* Headings/H3/Regular */
+    font-family: Outfit;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 93px */
+    margin: 16px 0;
+  }
+  .orthocentered_img {
+    display: block;
+    margin: auto; /* Horizontally center the image */
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+  }
+}
+
+/* Styles for screens with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Your CSS rules for tablets go here */
+  .ortho_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
+}
+
+/* Styles for screens with a minimum width of 992px and a maximum width of 1199px (e.g., small desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Your CSS rules for small desktops go here */
+  .main_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
+}
+
+/* Styles for screens with a minimum width of 1200px and above (e.g., large desktops) */
+@media (min-width: 1200px) {
+  /* Your CSS rules for large desktops go here */
+  .main_heading {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
 }

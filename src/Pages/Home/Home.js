@@ -40,7 +40,7 @@ function Home() {
             </div>
           </Col>
           <Col md={4}>
-            <Image className="main_img" src={dnalogo} alt="dna" cover />
+            <Image className="main_img" src={dnalogo} alt="dna" cover="true" />
           </Col>
         </Row>
         <Row>

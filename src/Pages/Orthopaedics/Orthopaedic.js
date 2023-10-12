@@ -149,7 +149,7 @@ function Orthopaedic() {
             </a>
           </Col>
         </Row>
-        <Row style={{ margin: "116px 0 201px 0" }}>
+        <Row style={{ margin: "116px 0 201px 0", width: "90%" }}>
           <Col md={9}>
             <section className="orthosec2">
               At Sri Chaitanya Ortho & Eye Hospital, we are committed to helping
@@ -159,14 +159,22 @@ function Orthopaedic() {
               excellence begins here.
             </section>
           </Col>
-          <Col md={3} className="d-flex justify-content-center">
-            <div >
-              <Button onClick={()=>{navigate('/book_an_appointment')}} variant="outline-dark" className="service_button1">Book an Appointment</Button>
+          <Col md={3}>
+            <div>
+              <Button
+                onClick={() => {
+                  navigate("/book_an_appointment");
+                }}
+                variant="outline-dark"
+                className="service_button1"
+              >
+                Book an Appointment
+              </Button>
             </div>
           </Col>
         </Row>
-        <div id="joint_replace" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Joint Replacement</h1>
+        <div id="joint_replace" className="sections_div">
+          <h1 className="orthosect_heading">Joint Replacement</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -210,7 +218,7 @@ function Orthopaedic() {
               <Image
                 src={jointrepl}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -292,8 +300,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="joint_preserving" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Joint Preserving Surgeries</h1>
+        <div id="joint_preserving" className="sections_div">
+          <h1 className="orthosect_heading">Joint Preserving Surgeries</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -334,7 +342,7 @@ function Orthopaedic() {
               <Image
                 src={jointpreserve}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -376,8 +384,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="trauma&Accident" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Trauma & Accident</h1>
+        <div id="trauma&Accident" className="sections_div">
+          <h1 className="orthosect_heading">Trauma & Accident</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -416,7 +424,7 @@ function Orthopaedic() {
               <Image
                 src={trauma}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -491,8 +499,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="Spine_Services" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Spine Services</h1>
+        <div id="Spine_Services" className="sections_div">
+          <h1 className="orthosect_heading">Spine Services</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -528,7 +536,12 @@ function Orthopaedic() {
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <Image src={spine} alt="joint" className="centered_img" rounded />
+              <Image
+                src={spine}
+                alt="joint"
+                className="orthocentered_img"
+                rounded
+              />
             </Col>
           </Row>
           <Row>
@@ -606,8 +619,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="Deformity_Correction_Surgeries" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Deformity Correction Surgeries</h1>
+        <div id="Deformity_Correction_Surgeries" className="sections_div">
+          <h1 className="orthosect_heading">Deformity Correction Surgeries</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -645,7 +658,7 @@ function Orthopaedic() {
               <Image
                 src={deformity}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -678,8 +691,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="Non_Union_Surgeries" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Non-Union Surgeries</h1>
+        <div id="Non_Union_Surgeries" className="sections_div">
+          <h1 className="orthosect_heading">Non-Union Surgeries</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -714,7 +727,7 @@ function Orthopaedic() {
               <Image
                 src={nonunion}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -760,8 +773,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="Illizarov_Surgeries" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Illizarov Surgeries</h1>
+        <div id="Illizarov_Surgeries" className="sections_div">
+          <h1 className="orthosect_heading">Illizarov Surgeries</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -801,7 +814,7 @@ function Orthopaedic() {
               <Image
                 src={illizarov}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -841,11 +854,10 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div
-          id="Sports_Medicine&Keyhole_Services"
-          style={{ margin: "160px 0" }}
-        >
-          <h1 className="sect_heading">Sports Medicine and Keyhole Services</h1>
+        <div id="Sports_Medicine&Keyhole_Services" className="sections_div">
+          <h1 className="orthosect_heading">
+            Sports Medicine and Keyhole Services
+          </h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -885,7 +897,7 @@ function Orthopaedic() {
               <Image
                 src={sports}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -944,8 +956,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="Shoulder_Surgery" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Shoulder Surgery</h1>
+        <div id="Shoulder_Surgery" className="sections_div">
+          <h1 className="orthosect_heading">Shoulder Surgery</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -984,7 +996,7 @@ function Orthopaedic() {
               <Image
                 src={shoulder}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -1020,8 +1032,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div id="Orthoscope" style={{ margin: "160px 0" }}>
-          <h1 className="sect_heading">Orthoscope</h1>
+        <div id="Orthoscope" className="sections_div">
+          <h1 className="orthosect_heading">Orthoscope</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
               <div
@@ -1059,7 +1071,7 @@ function Orthopaedic() {
               <Image
                 src={orthoscope}
                 alt="joint"
-                className="centered_img"
+                className="orthocentered_img"
                 rounded
               />
             </Col>
@@ -1115,8 +1127,8 @@ function Orthopaedic() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div className="Otherspecs" style={{ margin: "160px 0" }}>
-          <h1 className="spect_heading">Explore Other Specialties</h1>
+        <div className="Otherspecs">
+          <h1 className="orthospect_heading">Explore Other Specialties</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col sm={12} md={6}>
               <div
@@ -1130,13 +1142,13 @@ function Orthopaedic() {
                   <Image
                     src={opthalmology}
                     alt="joint"
-                    className="centered_img"
+                    className="orthocentered_img"
                     rounded
                   />
                 </div>
 
                 <div>
-                  <h1 className="sect_heading">Ophthalmology</h1>
+                  <h1 className="orthosect_heading">Ophthalmology</h1>
                   <section className="orthosec2">
                     Your vision is our priority, and we are dedicated to
                     providing you with world-class eye care services. Our team
@@ -1148,7 +1160,15 @@ function Orthopaedic() {
                   </section>
                 </div>
                 <div>
-                  <Button onClick={()=>{navigate('/opthalmology')}} className="service_button1" variant="outline-dark">View More</Button>
+                  <Button
+                    onClick={() => {
+                      navigate("/opthalmology");
+                    }}
+                    className="service_button1"
+                    variant="outline-dark"
+                  >
+                    View More
+                  </Button>
                 </div>
               </div>
             </Col>
@@ -1158,21 +1178,19 @@ function Orthopaedic() {
                   display: "flex",
                   flexDirection: "column",
                   gap: "24px",
-
                 }}
               >
-                <div style={{height:"520px",overflow:"hidden"}}>
+                <div style={{ height: "520px", overflow: "hidden" }}>
                   <Image
                     src={neurology}
                     alt="joint"
-                    className="centered_img"
+                    className="orthocentered_img"
                     rounded
-                   
                   />
                 </div>
 
                 <div>
-                  <h1 className="sect_heading">Neurology</h1>
+                  <h1 className="orthosect_heading">Neurology</h1>
                   <section className="orthosec2">
                     Your neurological well-being is our priority, and our expert
                     team is committed to providing you with comprehensive and
@@ -1183,7 +1201,15 @@ function Orthopaedic() {
                     ophthalmology services and discover how we can help you.
                   </section>
                   <div>
-                    <Button onClick={()=>{navigate('/neurology')}} className="service_button1" variant="outline-dark">View More</Button>
+                    <Button
+                      onClick={() => {
+                        navigate("/neurology");
+                      }}
+                      className="service_button1"
+                      variant="outline-dark"
+                    >
+                      View More
+                    </Button>
                   </div>
                 </div>
               </div>

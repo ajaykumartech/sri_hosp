@@ -1,5 +1,5 @@
 .footer_container {
-  border-radius: 48px 0px 0px 0px;
+  border-radius: 48px 48px 0px 0px;
   background: var(--grey-1000, #252525);
   height: auto;
   flex-shrink: 0;
@@ -119,12 +119,15 @@
     margin-left: 20px;
   }
   .footer_container {
-    border-radius: 48px 0px 0px 0px;
+    border-radius: 48px 48px 0px 0px;
     background: var(--grey-1000, #252525);
     height: auto;
     flex-shrink: 0;
     margin: 0;
     padding: 20px 56px 60px 56px;
+  }
+  #p{
+    font-size: 16px;
   }
 }
 

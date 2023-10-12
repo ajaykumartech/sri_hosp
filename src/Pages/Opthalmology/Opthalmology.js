@@ -46,7 +46,7 @@ function Opthalmology() {
             </div>
           </Col>
           <Col md={4}>
-            <Image src={spects} alt="spectacles" className="optha_spects" />
+            <Image src={spects} alt="spectacles" fluid className="optha_spects" />
           </Col>
         </Row>
         <Row>
@@ -124,7 +124,7 @@ function Opthalmology() {
             </a>
           </Col>
         </Row>
-        <Row style={{ margin: "116px 0 201px 0" }}>
+        <Row style={{ margin: "116px 0 201px 0" ,width: "90%"}}>
           <Col md={9}>
             <section className="opthasec2">
               At Sri Chaitanya Ortho & Eye Hospital, our unwavering commitment
@@ -135,7 +135,7 @@ function Opthalmology() {
               clarity and eye health starts right here.
             </section>
           </Col>
-          <Col md={3} className="d-flex justify-content-center">
+          <Col md={3}>
             <div>
               <Button
                 onClick={() => {
@@ -152,7 +152,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="Cataract_Surgery" style={{ margin: "160px 0" }}>
+        <div id="Cataract_Surgery" className="sections_divoptha">
           <h1 className="sect_heading">Cataract Surgery</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -198,7 +198,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="Phacoemulsification" style={{ margin: "160px 0" }}>
+        <div id="Phacoemulsification" className="sections_divoptha">
           <h1 className="sect_heading">Phacoemulsification</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -286,7 +286,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="LASIK" style={{ margin: "160px 0" }}>
+        <div id="LASIK" className="sections_divoptha">
           <h1 className="sect_heading">LASIK</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -332,7 +332,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="icls" style={{ margin: "160px 0" }}>
+        <div id="icls" className="sections_divoptha">
           <h1 className="sect_heading">Implantable Collamer Lenses (ICLs)</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -375,7 +375,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="Pterygium" style={{ margin: "160px 0" }}>
+        <div id="Pterygium" className="sections_divoptha">
           <h1 className="sect_heading">Pterygium Surgery</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -429,7 +429,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="Retinal_Injection" style={{ margin: "160px 0" }}>
+        <div id="Retinal_Injection" className="sections_divoptha">
           <h1 className="sect_heading">Retinal Injection</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -477,7 +477,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="Botox_Treatments" style={{ margin: "160px 0" }}>
+        <div id="Botox_Treatments" className="sections_divoptha">
           <h1 className="sect_heading">Botox Treatment</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -528,7 +528,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Opthamain_container">
-        <div id="Contact_Lens_Clinic" style={{ margin: "160px 0" }}>
+        <div id="Contact_Lens_Clinic" className="sections_divoptha">
           <h1 className="sect_heading">Contact Lens Clinic</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col xs={12} md={6}>
@@ -564,7 +564,7 @@ function Opthalmology() {
       </div>
       <hr />
       <div className="Orthomain_container">
-        <div className="Otherspecs" style={{ margin: "160px 0" }}>
+        <div className="Otherspecs">
           <h1 className="spect_heading">Explore Other Specialties</h1>
           <Row style={{ marginBottom: "52px" }}>
             <Col sm={12} md={6}>
@@ -585,7 +585,7 @@ function Opthalmology() {
                 </div>
 
                 <div>
-                  <h1 className="sect_heading">Ophthalmology</h1>
+                  <h1 className="sect_heading">Orthopaedics</h1>
                   <section className="orthosec2">
                     Your vision is our priority, and we are dedicated to
                     providing you with world-class eye care services. Our team
