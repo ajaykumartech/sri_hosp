@@ -15,18 +15,19 @@ function ScrollText() {
     // Create a GSAP timeline for the letter-by-letter color change animation
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".scroll_textCont", // Replace with your container element
-        start: "top 30%", // Adjust the start position as needed
-        end: "bottom bottom", // Adjust the end position as needed
+        delay: 1,
+        trigger: '.scroll_textCont', // Replace with the container element
+        start: 'top center', // Adjust the start position as needed
+        end: 'bottom bottom', // Adjust the end position as needed
         scrub: true, // Smoothly scrub through the animation
       },
     });
 
     // Function to create a color animation for each letter
     const createLetterAnimations = (textElement, colors) => {
-      const letters = textElement.textContent.split("");
+      const letters = textElement.textContent.split('');
       const letterSpans = letters.map((letter, index) => {
-        const span = document.createElement("span");
+        const span = document.createElement('span');
         span.textContent = letter;
         textElement.appendChild(span);
         return span;
@@ -43,29 +44,30 @@ function ScrollText() {
     };
 
     // Apply color change animations to the text
-    const textContainer = document.querySelector(".scroll_textCont"); // Replace with your container element
-    createLetterAnimations(textContainer, ["red", "blue", "green"]); // Change to the desired colors
+    const textContainer = document.querySelector('.scroll_textCont'); // Replace with your container element
+    createLetterAnimations(textContainer, ['red', 'blue', 'green']); // Change to the desired colors
 
     // Ensure to clean up ScrollTrigger when the component unmounts
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  });
+  }, []);
+
+
   return (
     <>
       <div className="scroll_textCont">
-        <p className="scrollText">CARE. TRUST. HEALTH</p>
+        <h1 className="scrollText">CARE. TRUST. HEALTH</h1>
       </div>
       <div>
   <div
     style={{
       display: "flex",
       flexDirection: "row",
-      margin:"0",
       justifyContent:"flex-start"
     }}
   >
-    <div style={{ marginBottom: "20px" }}>
+    <div style={{ marginBottom: "0px" }}>
       <Image
         src={check1}
         rounded
@@ -77,7 +79,7 @@ function ScrollText() {
         }}
       />
     </div>
-    <div style={{ marginBottom: "20px" }}>
+    <div className="grid_2">
       <Image
         src={check2}
         rounded
@@ -95,11 +97,11 @@ function ScrollText() {
       display: "flex",
       flexDirection: "row",
       alignItems: "center", // Center items horizontally
-      justifyContent:"space-evenly ",
+      justifyContent:"flex-start ",
       height:"386px"
     }}
   >
-    <div style={{ marginBottom: "20px" }}>
+    <div className="grid_3">
       <Image
         src={check3}
         rounded
@@ -111,8 +113,8 @@ function ScrollText() {
         }}
       />
     </div>
-    <div style={{width:"678px",  height:"386px"}}>
-      <p className="testimonial_p">
+    <div className="test_cont">
+      <p className="testimonial_p1">
         With an unwavering commitment to innovation and heartfelt compassion,
         we carve a unique path towards wellness.
       </p>

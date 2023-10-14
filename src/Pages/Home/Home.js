@@ -12,6 +12,7 @@ import Scroll from "../ScrollScreen/Scroll";
 import ScrollText from "../ScrollText/ScrollText";
 import Testmonial from "../Testmonials/Testmonial";
 import { useNavigate } from "react-router-dom";
+import Header from "../Header/Header";
 
 function Home() {
   const navigate =useNavigate();
@@ -23,7 +24,7 @@ function Home() {
     <>
     <div className="main_container">
       <Row>
-        {/* <Header /> */}
+        <Header />
       </Row>
       <Container fluid>
         <Row>
@@ -36,11 +37,11 @@ function Home() {
                 Empowering You with Resilient Bones and Vision Clarity Beyond
                 Limits
               </p>
-              <Button onClick={()=>{navigate('/book_an_appointment')}} className="main_Btn">Book an Appointment</Button>
+              <Button variant="dark" onClick={()=>{navigate('/book_an_appointment')}} className="main_Btn">Book an Appointment</Button>
             </div>
           </Col>
           <Col md={4}>
-            <Image className="main_img" src={dnalogo} alt="dna" cover="true" />
+            <Image className="heros" src={dnalogo} alt="dna" cover="true" />
           </Col>
         </Row>
         <Row>

@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 import "./Appointment.css";
 import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 function Appointment() {
   const [formData, setFormData] = useState({
@@ -58,7 +59,9 @@ function Appointment() {
 
   return (
     <>
+    
       <div className="appointment_container">
+      <Header />
         <h1 className="app_heading">Contact Us</h1>
         <div className="app_sub_p">
           <p className="app_text_p">

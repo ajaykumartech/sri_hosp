@@ -18,6 +18,7 @@ import "./Orthopaedic.css";
 import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Header from "../Header/Header";
 
 function Orthopaedic() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ function Orthopaedic() {
   return (
     <>
       <div className="Orthomain_container">
+        <Header />
         <Row>
           <Col md={8}>
             <div>

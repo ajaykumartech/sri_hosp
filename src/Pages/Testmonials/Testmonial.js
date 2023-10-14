@@ -11,9 +11,9 @@ function Testmonial() {
       <div>
         <h1 className="testimonial_heading">Patient Experiences</h1>
       </div>
-      <div>
+      <div style={{margin:"0 15px 0 0"}}>
         <Carousel interval={1000}>
-          <Carousel.Item>
+          <Carousel.Item style={{margin:"0 20px 0 20px"}}>
             <Row className="carousel_Cont">
               <Col md={4}>
                 <div>
@@ -30,7 +30,7 @@ function Testmonial() {
                   />
                 </div>
               </Col>
-              <Col md={8}>
+              <Col md={8} sm={12}>
                 {" "}
                 {/* Adjust the column size */}
                 <div
@@ -44,7 +44,7 @@ function Testmonial() {
                 >
                   <div>
                     {" "}
-                    <Image src={group} alt="0.." />
+                    <Image className="img-fluid" src={group} alt="0.." />
                   </div>
                   <div>
                     <p className="testimo_subtex">
@@ -62,9 +62,9 @@ function Testmonial() {
               </Col>
             </Row>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item sstyle={{margin:"0 20px 0 20px"}}>
             <Row className="carousel_Cont">
-              <Col md={4}>
+              <Col md={4}  >
                 <div>
                   <Image
                     rounded
@@ -79,7 +79,7 @@ function Testmonial() {
                   />
                 </div>
               </Col>
-              <Col md={8}>
+              <Col md={8} sm={12}>
                 {" "}
                 {/* Adjust the column size */}
                 <div

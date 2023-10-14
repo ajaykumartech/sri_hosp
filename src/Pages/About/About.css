@@ -34,6 +34,7 @@
   max-height: 666px;
   flex-shrink: 0;
   border-radius: 32px;
+  object-fit: cover;
 }
 
 .about_head2 {
@@ -49,46 +50,99 @@
 }
 
 .about3_head {
-    color: var(--text-icon-light-heading, #252525);
+  color: var(--text-icon-light-heading, #252525);
+  /* Headings/H3/Regular */
+  font-family: Outfit;
+  font-size: 93px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 93px*/
+  margin-bottom: 48px;
+}
+
+.about3_p_text {
+  color: var(--text-icon-light-body, #3f454d);
+  /* Body/TextL/Regular */
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  letter-spacing: 0.48px;
+  max-width: 832px;
+}
+
+.image1_abt {
+  width: 367px;
+  height: 754px;
+  flex-shrink: 0;
+  margin: 0px;
+  padding: 0px;
+}
+
+.image2_abt {
+  width: 367px;
+  max-height: 520px;
+  flex-shrink: 0;
+  margin: 0px;
+  padding: 0px;
+}
+
+.about4_cont {
+  margin: 251px 144px 106px 0;
+  padding: 76px 0 70px 14px;
+}
+
+.about4_sub_text {
+  color: var(--text-icon-light-body, #3f454d);
+
+  /* Headings/H4/Medium */
+  font-family: Outfit;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 58px */
+}
+.about4_sub_text_p {
+  color: var(--text-icon-light-body, #3f454d);
+
+  /* Body/TextL/Regular */
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  letter-spacing: 0.48px;
+  align-self: stretch;
+  max-width: 410px;
+}
+.about5_cont {
+  padding: 138px 0;
+  background: #3e3e3e;
+}
+
+.about_accord_body {
+  margin: 35px 15px 65px 15px;
+  background-color: #3e3e3e;
+  color: var(--base-white, #fff);
+  max-width: 1576px;
+  /* Body/TextL/Regular */
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  letter-spacing: 0.48px;
+}
+
+.about_accord_heading {
+  color: var(--neutral-100, #FAFBFC);
 /* Headings/H3/Regular */
+max-width: 760px;
 font-family: Outfit;
 font-size: 93px;
 font-style: normal;
 font-weight: 400;
-line-height: 100%; /* 93px*/ 
-margin-bottom: 48px;
-}
-
-
-.about3_p_text {
-    color: var(--text-icon-light-body, #3F454D);
-    /* Body/TextL/Regular */
-    font-family: Outfit;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 36px */
-    letter-spacing: 0.48px;  
-    max-width: 832px;
-}
-
-.image1_abt {
-    width: 367px;
-height: 754px;
-flex-shrink: 0;
-margin:0px;
-padding:0px;
-}
-
-.image2_abt {
-    width: 367px;
-   max-height: 520px;
-flex-shrink: 0;
-margin:0px;
-padding:0px;
-}
-
-.about4_cont{
-    margin:251px 0 106px 0;
-    padding:76px 0 70px 14px; 
+line-height: 100%; /* 93px */
+margin: 0 5px;
 }

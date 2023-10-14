@@ -4,10 +4,65 @@
 }
 
 .scrollText {
-   /* Headings/H1/SemiBold */
-font-family: Outfit;
-font-size: 151px;
-font-style: normal;
-font-weight: 600;
-line-height: 100%; /* 151px */ 
+  /* Headings/H1/SemiBold */
+  font-family: Outfit;
+  font-size: 151px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 151px */
+  color: var(--text-icon-light-heading,#775634);
+}
+.testimonial_p1 {
+  color: var(--text-icon-light-heading, #252525);
+  /* Headings/H4/Regular */
+  font-family: Outfit;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 58px */
+  max-width: 785px;
+}
+
+.test_cont {
+  max-width: 678px;
+  max-height: 386px;
+}
+.grid_2 {
+   margin: 0px 0px 0px 400px;
+}
+.grid_3{
+   margin: 0px 0px 0px 400px;
+}
+/* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
+@media (max-width: 767px) {
+  /* Your CSS rules for mobile devices go here */
+  .testimonial_p1 {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H4/Regular */
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 58px */
+    max-width: 385px;
+  }
+  .test_cont {
+    width: auto;
+    height: auto;
+  }
+  .scrollText {
+    /* Headings/H1/SemiBold */
+    font-family: Outfit;
+    font-size: 71px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 151px */
+    color: transparent;
+  }
+  .grid_2 {
+    margin: 0 0 20px 0px;
+  }
+  .grid_3{
+    margin: 0 0 20px 0px;
+  }
 }

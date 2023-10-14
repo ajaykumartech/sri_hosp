@@ -16,7 +16,7 @@ function Services() {
           <h1 className="service_maintext">Our Medical Specialities</h1>
         </Row>
         <Row>
-          <Col>
+          <Col sm={12}>
             <p className="service_text">
               At Sri Chaitanya, we are dedicated to delivering top-notch
               healthcare services tailored to your needs. With a focus on
@@ -51,7 +51,7 @@ function Services() {
                     View Services
                   </Button>
                 </Col>
-                <Col>
+                <Col md={6} sm={12}>
                   <Image className="centered_imag" src={ortho} alt="ortho" />
                 </Col>
               </Row>
@@ -79,7 +79,7 @@ function Services() {
                     View Services
                   </Button>
                 </Col>
-                <Col>
+                <Col md={6} sm={12}>
                   <Image className="centered_imag" src={optha} alt="ortho" />
                 </Col>
               </Row>
@@ -107,7 +107,7 @@ function Services() {
                     View Services
                   </Button>
                 </Col>
-                <Col>
+                <Col md={6} sm={12}>
                   <Image className="centered_imag" src={neuro} alt="ortho" />
                 </Col>
               </Row>

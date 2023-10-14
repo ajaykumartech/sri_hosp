@@ -71,7 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 112px;
+  height: 150px;
   border: 1px solid #ccc;
   transition: filter 0.1s ease-in-out; /* Add a transition for smooth hover effect */
   margin: 0px; /* Add margin to each cell */
@@ -82,7 +82,7 @@
   filter: grayscale(0%); /* Remove grayscale on hover to show original colors */
 }
 
-img {
+.imgs {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
@@ -113,7 +113,7 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 36px */
-  margin:80px 0 32px 0;
+  margin:40px 0 32px 0;
 }
 
 .insucard_container {
@@ -164,7 +164,7 @@ img {
   }
 
   .insu_content {
-    width: auto;
+    max-width:fit-content;
     color: var(--greyscale-text-icon-body, #4f5154);
     /* Body/TextL/Regular */
     font-family: Outfit;
@@ -177,4 +177,55 @@ img {
 
   .insu5_cont_ul {
     margin:124px 0 254px 0;
+  }
+
+  @media (max-width: 767px) {
+    /* Your CSS rules for mobile devices go here */
+    .insu_headings {
+      color: var(--text-icon-light-heading, #252525);
+      /* Headings/H3/Regular */
+      font-family: Outfit;
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 93px */
+      max-width: 869px;
+    }
+    .centerd-img {
+      max-width: 715px;
+      max-height: 715px;
+      margin-top: 180px;
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: auto;
+      padding: 0px;
+    }
+    .insu1_cont {
+      margin: 179px 0 99px 0;
+      height: auto;
+    }
+    .insu2_headings {
+      color: var(--text-icon-light-heading, #252525);
+      /* Headings/H3/Regular */
+      font-family: Outfit;
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      text-align: center;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0px;
+      margin: 20px 10px 10px 10px;
+      /* Apply grayscale to all images by default */
+    }
+    .insu3_cont {
+      margin: 62px 0 48px 0;
+      display: flow-root;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }

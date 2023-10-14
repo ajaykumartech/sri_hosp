@@ -40,6 +40,7 @@ import shield from "../../Assets/Images/Insurance/insu_shield.png";
 import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 function Insurance() {
   const navigate = useNavigate();
@@ -78,7 +79,9 @@ function Insurance() {
   return (
     <>
     <div className="insurance_container">
+      <Header />
       <div className="insu1_cont">
+
         <Container fluid>
           <Row>
             <Col sm={12} md={8}>
@@ -95,8 +98,8 @@ function Insurance() {
                 without financial worry.
               </p>
             </Col>
-            <Col md={4}>
-              <Image src={shield} alt="shield" fluid className="centerd-img" />
+            <Col sm={12} md={4}>
+              <Image src={shield} alt="shield" className="centerd-img" />
             </Col>
           </Row>
         </Container>
@@ -108,7 +111,7 @@ function Insurance() {
         <div className="image-grid">
           {imageSources.map((image, index) => (
             <div key={index} className="image-cell">
-              <Image src={image} alt={`Image ${index + 1}`} />
+              <Image className="imgs" src={image} alt={`Image ${index + 1}`} />
             </div>
           ))}
         </div>

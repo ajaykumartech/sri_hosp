@@ -23,18 +23,18 @@ function Scroll() {
   // Iterate through the screens and create animations
   screens.forEach((screen, index) => {
     // Calculate the screen width based on the number of screens
-    const screenWidth = `${100 / screens.length}%`;
+    // const screenWidth = `${100 / screens.length}%`;
 
     // Calculate the animation duration and delay
-    const duration = 1; // Animation duration in seconds
+    const duration = 3; // Animation duration in seconds
     const delay = 0.5; // Delay between each screen in seconds
 
     // Add animations to the timeline
     tl.fromTo(
       screen,
       {
-        x: screenWidth, // Move each screen to the right initially
-        opacity: 0, // Initially hidden
+        x: index === 0 ? '0%' : '100%', // Move each screen to the right initially
+        opacity: 1, // Initially hidden
       },
       {
         x: '0%',
@@ -42,11 +42,16 @@ function Scroll() {
         duration: duration,
         scrollTrigger: {
           trigger: screen,
-          start: 'top right', // Adjust start position as needed
-          end: 'bottom center', 
-          yoyo: true,// Adjust end position as needed
-          scrub: true, // Smoothly scrub through the animation
-          toggleActions: 'play none none none', // Play animation on enter, pause on leave
+          start: index === 0 ? 'top top' : 'top bottom', // Start the animation at the top of the screen if it's the first screen, otherwise start at the bottom
+          end: index === 0 ? 'top bottom' : 'top top', // End at the bottom for the first screen, otherwise, end at the top
+          scrub: 1, // Smoothly scrub through the animation
+          toggleActions: 'play none none none',
+          snap: {
+            snapTo: "labels", // snap to the closest label in the timeline
+            duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+            delay: 0.5, // wait 0.2 seconds from the last scroll event before doing the snapping
+            ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+          }, // Play animation on enter, pause on leave
         },
       },
       `-=${delay}` // Delay each animation by a specified time

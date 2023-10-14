@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   gap: 0px;
-  margin-top: 128px;
+  margin-top: 256px;
 }
 .card_contact {
   max-width: 520px;
@@ -38,7 +38,7 @@
   margin-left: 45px;
 }
 .contact_content {
-  width: 380px;
+  max-width: 480px;
   color: var(--greyscale-text-icon-body, #4f5154);
   /* Body/TextL/Regular */
   font-family: Outfit;
@@ -53,11 +53,12 @@
   color: var(--accent-default, #f7951d);
   /* Body/TextL/Regular */
   font-family: Outfit;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 36px */
   letter-spacing: 0.48px;
+  margin-top:16px;
 }
 
 .centeraed_imgs {
@@ -87,4 +88,27 @@
   transition: transform 0.5s ease-in;
 }
 
-
+/* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
+@media (max-width: 767px) {
+  /* Your CSS rules for mobile devices go here */
+  .contact_content {
+    width: 100%;
+    color: var(--greyscale-text-icon-body, #4f5154);
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+  }
+  .contact_h2 {
+    color: var(--greyscale-text-icon-title, #141415);
+    /* Headings/H5/SemiBold */
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 36px */
+  }
+}

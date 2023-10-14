@@ -13,13 +13,13 @@ function Intro() {
   return (
     <Container className="intro_container">
       <Row>
-        <Col>
+        <Col  md={7}>
           <h1 className="maintext_intro">Experienced and Up-to-Date</h1>
         </Col>
         <Col></Col>
       </Row>
       <Row>
-        <Col>
+        <Col md={7} sm={12}>
           <h1 className="subtext_intro">Since 1990</h1>
           <p className="subtext_text">
             We're a passionate team dedicated to guiding you towards a life of
@@ -28,7 +28,7 @@ function Intro() {
             your journey.
           </p>
         </Col>
-        <Col>
+        <Col md={5}>
           <Row>
             <Col>
               <h1>10K+</h1>

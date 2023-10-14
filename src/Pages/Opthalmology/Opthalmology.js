@@ -16,6 +16,7 @@ import { Button, Col, Image, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./Opthalmology.css";
 import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 function Opthalmology() {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ function Opthalmology() {
   return (
     <>
       <div className="Opthamain_container">
+        <Header />
         <Row>
           <Col md={8}>
             <div>
