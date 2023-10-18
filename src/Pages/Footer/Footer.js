@@ -4,7 +4,6 @@ import "./Footer.css";
 import insta from "../../Assets/Images/insta.png";
 import watsapp from "../../Assets/Images/watsapp.png";
 import fb from "../../Assets/Images/fb.png";
-import arrow from "../../Assets/Images/arrow.png";
 import email from "../../Assets/Images/email.png";
 import phone from "../../Assets/Images/phone.png";
 import { FiArrowUpRight } from 'react-icons/fi';
