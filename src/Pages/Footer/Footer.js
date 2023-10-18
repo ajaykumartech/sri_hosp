@@ -7,6 +7,7 @@ import fb from "../../Assets/Images/fb.png";
 import arrow from "../../Assets/Images/arrow.png";
 import email from "../../Assets/Images/email.png";
 import phone from "../../Assets/Images/phone.png";
+import { FiArrowUpRight } from 'react-icons/fi';
 
 function Footer() {
   return (
@@ -17,7 +18,7 @@ function Footer() {
             <div className="get_touch_cont">
               <h3 className="get_toch">Get in Touch</h3>{" "}
               <span>
-                <Image className="arrow_img" src={arrow} />
+                <FiArrowUpRight className="arrow_img" size={105}/>
               </span>
             </div>
             <div style={{ marginTop: "44px" }}>

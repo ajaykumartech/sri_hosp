@@ -9,43 +9,46 @@ import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import { useEffect } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 function Scroll() {
-   
+  gsap.registerPlugin(ScrollTrigger);
     useEffect(() => {
+
        // Create a GSAP timeline
   const tl = gsap.timeline();
 
   // Select all screen divs
-  const screens = document.querySelectorAll('.screen');
+  const screens = gsap.utils.toArray('.screen');
 
   // Iterate through the screens and create animations
-  screens.forEach((screen, index) => {
+  screens.forEach((screend, index) => {
     // Calculate the screen width based on the number of screens
     // const screenWidth = `${100 / screens.length}%`;
 
     // Calculate the animation duration and delay
-    const duration = 3; // Animation duration in seconds
-    const delay = 0.5; // Delay between each screen in seconds
+    const duration = 1; // Animation duration in seconds
+    const delay = 5; // Delay between each screen in seconds
 
     // Add animations to the timeline
     tl.fromTo(
-      screen,
+      screend,
       {
         x: index === 0 ? '0%' : '100%', // Move each screen to the right initially
         opacity: 1, // Initially hidden
       },
       {
-        x: '0%',
+        x: 0 * (screend.length-1),
         opacity: 1,
         duration: duration,
         scrollTrigger: {
-          trigger: screen,
+          trigger: screend,
           start: index === 0 ? 'top top' : 'top bottom', // Start the animation at the top of the screen if it's the first screen, otherwise start at the bottom
-          end: index === 0 ? 'top bottom' : 'top top', // End at the bottom for the first screen, otherwise, end at the top
+          end: "+=1000", // End at the bottom for the first screen, otherwise, end at the top
           scrub: 1, // Smoothly scrub through the animation
           toggleActions: 'play none none none',
+          pin:'true',
+          anticipatePin:1,
           snap: {
             snapTo: "labels", // snap to the closest label in the timeline
             duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)

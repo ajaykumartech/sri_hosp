@@ -1,18 +1,35 @@
 import React, { useState } from "react";
-import { Button, Image } from "react-bootstrap";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../Assets/Images/Logo.png";
+
+import { NavLink } from "react-router-dom";
+import "./Header.css";
+import ddlogo from "../../Assets/Images/ddlogo.png"
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
-import "./Header.css";
 
 function Header() {
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
+  // dropdown
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="main">
-      <Image onClick={()=>navigate("/home")} alt="logo1" src={logo} className="logo" style={{ width: "200px" }} />
+      <NavLink to="/home" onClick={handleClick}>
+        <img
+          alt="logo1"
+          src={logo}
+          className="logo"
+          style={{ width: "200px" }}
+        />
+      </NavLink>
 
       <div
         className="main-div"
@@ -26,8 +43,7 @@ function Header() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink
-                 to="/About"
-                active ClassName="active"
+                to="/About"
                 className="nav-links"
                 onClick={handleClick}
               >
@@ -36,31 +52,34 @@ function Header() {
             </li>
             <li className="nav-item">
               <NavLink
-                exact
-                to="/insurance"
-                active ClassName="active"
+                to="/Insurance"
                 className="nav-links"
                 onClick={handleClick}
               >
-                Insurance
+                Insurances
               </NavLink>
+            </li>
+            <li className="nav-item dropdown-li">
+              <div className="dropdown">
+                <button onClick={toggleDropdown} className="special">Specialities<img className="dropdown-icon" src={ddlogo} alt="dropdown"/></button>
+                {isOpen && (
+                  <ul>
+                    <li>
+                      <NavLink to="/orthopaedics">Orthopaedics</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/opthalmology">Ophthalmology</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/Neuro">Neuro Surgeon</NavLink>
+                    </li>
+                  </ul>
+                )}
+              </div>
             </li>
             <li className="nav-item">
               <NavLink
-                exact
-                to="/specialities"
-                active ClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Specialities
-              </NavLink>
-            </li>
-            <li className="nav-item ">
-              <NavLink
-                exact
                 to="/book_an_appointment"
-                active ClassName="active"
                 className="nav-links appointment"
                 onClick={handleClick}
               >
@@ -70,13 +89,16 @@ function Header() {
           </ul>
         </div>
         <div className="nav-icon" onClick={handleClick}>
-          <i className="icons">{click ? <FaTimes size={24} /> : <FaBars size={24} />}</i>
-          <div>
-          <Button onClick={() =>navigate("/book_an_appointment")} variant="dark" className="btn-app">
+          <i className="icons">{click ? <FaTimes /> : <FaBars />}</i>
+          <button
+            variant="dark"
+            className="btn-app"
+            onClick={() => {
+              navigate("/Appointment");
+            }}
+          >
             Appointment
-          </Button>
-          </div>
-         
+          </button>
         </div>
       </div>
     </div>

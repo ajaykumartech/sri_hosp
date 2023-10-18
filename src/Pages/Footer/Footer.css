@@ -67,6 +67,7 @@
     transform: rotate(-4deg);
     flex-shrink: 0; 
     height:100px;
+    color:#fff;
 }
 
 .sec_div{
@@ -86,12 +87,10 @@
   flex-direction: row;
   align-items: center,
 }
-.get_toch_cont:hover{
-  color:#dbc818
+.get_touch_cont:hover .arrow_img {
+  color: yellow; /* Background color change on hover */
 }
-.arrow_img:hover{
-  background-color:#252525
- }
+
 
 /* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
 @media (max-width: 767px) {

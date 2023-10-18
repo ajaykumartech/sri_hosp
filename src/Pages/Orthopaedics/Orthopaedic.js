@@ -451,7 +451,8 @@ function Orthopaedic() {
               <div style={{ gap: "40px" }}>
                 <ul>
                   <li>
-                    <p>Fracture Fixations</p>
+                    <p>Fracture Fixations
+                    </p>
                   </li>
                   <li>
                     <p>Minimal Access Trauma Surgery</p>

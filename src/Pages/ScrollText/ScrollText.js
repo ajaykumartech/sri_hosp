@@ -12,14 +12,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 function ScrollText() {
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     // Create a GSAP timeline for the letter-by-letter color change animation
     const tl = gsap.timeline({
       scrollTrigger: {
         delay: 1,
         trigger: '.scroll_textCont', // Replace with the container element
         start: 'top center', // Adjust the start position as needed
-        end: 'bottom bottom', // Adjust the end position as needed
-        scrub: true, // Smoothly scrub through the animation
+        end: 'bottom center', // Adjust the end position as needed
+        scrub: 1, // Smoothly scrub through the animation
       },
     });
 

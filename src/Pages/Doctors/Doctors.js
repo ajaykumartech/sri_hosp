@@ -35,7 +35,7 @@ function Doctors() {
             </Card>
            
             <div className='centered_text'>
-                <h4 className='doct_name'>Dr. S. Alekhya{" "}<span>M.S. (Ophthalmology)</span></h4>
+                <h2 className='doct_name'>Dr. S. Alekhya{" "}<span>M.S. (Ophthalmology)</span></h2>
                 <p>FICO, FELLOW IN PHACO</p>
                 <p>Shoulder Surgery</p>
                 <p>(ARAVIND MADURAI)</p>
