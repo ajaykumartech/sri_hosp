@@ -222,7 +222,7 @@ function Appointment() {
           </Row>
           <div className="app_card">
             <Row>
-              <Col sm={12} md={8} style={{ padding: "69px" }}>
+              <Col sm={12} md={8} className="app_card_map1">
                 <Row>
                   <Col>
                     <h1 className="app_addr_h">Contact Numbers</h1>
@@ -243,17 +243,28 @@ function Appointment() {
                   </p>
                 </Row>
               </Col>
-              <Col sm={12} md={4} style={{ padding: "69px" }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477.5495139273673!2d81.67762659601236!3d16.75695704857599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37b70322cf445b%3A0x1fabbfe8a070c97c!2sSRI%20RAMALINGESWARA%20MEDICAL%20%26%20SURGICAL%20AGENCIES!5e0!3m2!1sen!2sin!4v1697885315344!5m2!1sen!2sin"
-                  width="400"
-                  height="300"
-                  style={{borderRadius: "24px",border: "1px solid var(--neutral-1000, #A1A4AC)"}}
-                  title="Google Map of Sri Krishna Chaitanya hospitals"
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+              <Col sm={12} md={4} className="app_card_map2">
+                <div
+                  style={{
+                    position: "relative",
+                    overflow: "hidden",
+                    width: "100%",
+                  }}
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477.5495139273673!2d81.67762659601236!3d16.75695704857599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37b70322cf445b%3A0x1fabbfe8a070c97c!2sSRI%20RAMALINGESWARA%20MEDICAL%20%26%20SURGICAL%20AGENCIES!5e0!3m2!1sen!2sin!4v1697885315344!5m2!1sen!2sin"
+                    width="400"
+                    height="400"
+                    style={{
+                      borderRadius: "24px",
+                      border: "1px solid var(--neutral-1000, #A1A4AC)",
+                    }}
+                    title="Google Map of Sri Krishna Chaitanya hospitals"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </Col>
             </Row>
           </div>

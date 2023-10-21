@@ -165,10 +165,25 @@
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 36px */
+  margin-bottom: 23px;
+}
+.app_card_map2 {
+  padding: 5px;
+}
+
+.app_card_map1 {
+  padding: 69px;
 }
 
 @media (max-width: 767px) {
   /* Your CSS rules for mobile devices go here */
+  .app_card_map1 {
+    padding: 34px;
+  }
+  .app_card_map2 {
+    padding: 34px;
+  }
+ 
   .app_heading {
     color: var(--text-icon-light-heading, #252525);
     /* Headings/H3/Regular */
@@ -219,7 +234,8 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 36px */
+    overflow:auto;
+    line-height: 1.5; /* 36px */
     letter-spacing: 0.48px;
   }
   .app_addr_h {
@@ -230,5 +246,6 @@
     font-style: normal;
     font-weight: 600;
     line-height: 100%; /* 36px */
+    margin-bottom: 23px;
   }
 }
