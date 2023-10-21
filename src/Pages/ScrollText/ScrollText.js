@@ -11,8 +11,8 @@ import { Image } from "react-bootstrap";
 gsap.registerPlugin(ScrollTrigger);
 
 function ScrollText() {
+gsap.registerPlugin(ScrollTrigger)
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     // Create a GSAP timeline for the letter-by-letter color change animation
     const tl = gsap.timeline({
       scrollTrigger: {

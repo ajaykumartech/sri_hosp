@@ -10,10 +10,21 @@ import Insurance from './Pages/Insurance/Insurance';
 import Appointment from './Pages/Appointment/Appointment';
 import Loading from './Pages/Loading/Loading';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <>
+     <Helmet>
+        <title>
+         Sri KrishnaChaitanya Hospitals
+        </title>
+        <link rel="canonical" href="https://visheshcountrycache.tech/" />
+        <meta name='description' content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals." />
+         <meta name="keywords" content="visheshcountrycache,ortho hospital, knee fracture, chaitanya hospital,best Ortho hospital in tanuku,bones,krishnareddy hospital"/>
+        <meta name="robots" content="index, follow" />
+         <html lang="en" />
+      </Helmet>
     <BrowserRouter>
        <Routes>
         <Route exact="true" path="/" Component={Loading} />

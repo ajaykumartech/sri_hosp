@@ -40,8 +40,8 @@ function Contact() {
                 <p className="contact_content">08819-234455</p>
                 <p className="contact_content">08819-22456</p>
               </div>
-              <label>E-mail:</label>
-              <p className="contact_link">srichaitanyahospital@gmail.com</p>
+              <label className="contact_label">E-mail:</label>
+              <p className="contact_links">srichaitanyahospital@gmail.com</p>
             </Row>
           </Card>
         </Col>
@@ -59,7 +59,7 @@ function Contact() {
                 <p className="contact_content">9:00 AM - 2:00 PM</p>
                 <p className="contact_content">5:00 PM - 7:00 PM</p>
               </div>
-              <p className="contact_link">24/7 Emergency Services</p>
+              <p className="contact_links">24/7 Emergency Services</p>
             </Row>
           </Card>
         </Col>

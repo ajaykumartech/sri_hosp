@@ -2,6 +2,15 @@
   margin: 0 3%;
 }
 
+.Orthoheader_cont {
+  margin-bottom: 144px;
+}
+ul{
+  padding:0px;
+  li{
+    width:auto;
+  }
+}
 .ortho_heading {
   color: var(--text-icon-light-heading, #252525);
 
@@ -38,7 +47,7 @@
 }
 .ortho_hip {
   width: 379.064px;
-  height: 602.501px;
+  height: auto;
   transform: rotate(-29.018deg);
   flex-shrink: 0;
   align-items: center;
@@ -62,15 +71,14 @@
   flex-shrink: 0;
 }
 
-.service_button {
-  max-width: 70%;
-  margin-right: 224px;
+.service_buttonOrth {
+  width: 70%;
+  margin: 50px 224px 0 0;
   justify-content: flex-end;
   background-color: #fff8f1;
   padding: 13px 0px;
   border-bottom: 1px solid var(--neutral-800, #e5e5e7);
   outline-style: hidden;
-  margin: 50px 0 0px 0px;
   color: var(--text-icon-light-body, #3f454d);
   /* Headings/H5/Regular */
   font-family: Outfit;
@@ -155,6 +163,61 @@ li p {
 /* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
 @media (max-width: 767px) {
   /* Your CSS rules for mobile devices go here */
+  .Orthomain_container {
+    margin: 144px 3% 0 3%;
+  }
+  .Orthoheader_cont {
+    margin-bottom: 72px;
+  }
+  .orthosec1 {
+    color: var(--text-icon-light-body, #3f454d);
+    width: 90%;
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+    margin: 32px 0 24px 0px;
+  }
+  
+  .orthosec2 {
+    color: var(--text-icon-light-body, #3f454d);
+    width: 90%;
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+  }
+  .ortho_hip {
+    width: 250px;
+    height: auto;
+    transform: rotate(-29.018deg);
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+  }
+  .ortho_servicehead {
+    color: var(--text-icon-light-heading, #252525);
+  
+    /* Headings/H4/Regular */
+    font-family: Outfit;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 58px */
+  }
+  
+  .arr_ortho_icon {
+    width: 32.91px;
+    height: 27.463px;
+    flex-shrink: 0;
+  }
   .ortho_heading {
     color: var(--text-icon-light-heading, #252525);
     /* Headings/H2/Regular */
@@ -178,19 +241,19 @@ li p {
     margin:80px 0px;
   }
   
-  .service_button{
-    max-width: 70%;
-    margin-right: 224px;
+  .service_buttonOrth {
+    max-width: 100%;
+    margin-right: 10px;
     justify-content: flex-end;
     background-color: #fff8f1;
     padding: 13px 0px;
     border-bottom: 1px solid var(--neutral-800, #e5e5e7);
     outline-style: hidden;
-    margin: 50px 0 0px 0px;
+    margin: 50px 10px 0px 0px;
     color: var(--text-icon-light-body, #3f454d);
     /* Headings/H5/Regular */
     font-family: Outfit;
-    font-size: 36px;
+    font-size: 19px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 36px */
@@ -225,6 +288,30 @@ li p {
     width: 100%;
     height: auto;
     padding: 0px;
+  }
+  .Orthomain_container{
+    padding:5px;
+    margin: 0 3%;
+  }
+  .sec_subhead {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H5/Regular */
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 36px */
+  }
+  li p{
+    color: var(--text-icon-light-heading, #252525);
+
+    /* Headings/H3/Regular */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 100%; /* 93px */
+    margin: 13px 0;
   }
 }
 

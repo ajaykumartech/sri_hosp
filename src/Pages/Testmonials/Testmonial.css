@@ -55,6 +55,19 @@ font-weight: 400;
 line-height: 100%; /* 58px */
 }
 
+#testi_imgs {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+#testi_imgs2 {
+  height: auto;
+  width: auto;
+  object-fit: cover;
+}
+
+
 
 /* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
 @media (max-width: 767px) {
@@ -76,7 +89,7 @@ line-height: 100%; /* 58px */
   /* Bg_Blur */
   padding: 15px;
   backdrop-filter: blur(3.5px);
-  width:100%;
+  width:90%;
 }
 .testimo_headin {
   color: var(--greyscale-text-icon-title, #141415);
@@ -97,6 +110,17 @@ line-height: 100%; /* 36px */
   font-weight: 400;
   line-height: 150%; /* 36px */
   letter-spacing: 0.48px;
+}
+#testi_imgs {
+  height: 200px;
+  width: 400px;
+  object-fit:scale-down;
+}
+
+#testi_imgs2 {
+  height: 20px;
+  width: auto;
+  object-fit: cover;
 }
 
 }

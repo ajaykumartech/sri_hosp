@@ -108,26 +108,52 @@
     display:flow-root;
     justify-content:space-between;
   }
+  
   .get_toch {
-    font-size: 45px ;
+    font-size: 35px ;
+  }
+  .get_touch_cont{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center,
+  }
+  .get_touch_cont:hover .arrow_img {
+    color: yellow; /* Background color change on hover */
   }
   .arrow_img{
     transform: rotate(-4deg);
     flex-shrink: 0; 
     height: 45px;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   .footer_container {
     border-radius: 48px 48px 0px 0px;
     background: var(--grey-1000, #252525);
     height: auto;
+    max-width:auto;
     flex-shrink: 0;
     margin: 0;
-    padding: 20px 56px 60px 56px;
+    padding: 20px 23px 60px 23px;
+  }
+  .footer_subtext {
+    color: #fff;
+    /* Headings/H5/Regular */
+    font-family: Outfit;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 36px */
   }
   #p{
     font-size: 16px;
   }
+  .sec_div{
+    gap:33px;
+    display: flex;
+    flex-direction: column;
+    width:80%;
+  }
+  
 }
 
 /* Styles for screens with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */

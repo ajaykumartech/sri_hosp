@@ -4,7 +4,7 @@ import logo from "../../Assets/Images/Logo.png";
 
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import ddlogo from "../../Assets/Images/ddlogo.png"
+import {MdOutlineArrowDropDownCircle} from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 
@@ -22,12 +22,12 @@ function Header() {
   };
   return (
     <div className="main">
-      <NavLink to="/home" onClick={handleClick}>
+      <NavLink to="/Home" activeClassName="active" onClick={handleClick}>
         <img
           alt="logo1"
           src={logo}
           className="logo"
-          style={{ width: "200px" }}
+          style={{ width: "auto", height:'150px' }}
         />
       </NavLink>
 
@@ -43,8 +43,10 @@ function Header() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink
+                exact
                 to="/About"
-                className="nav-links"
+                activeClassName="active"
+                className="nav-link"
                 onClick={handleClick}
               >
                 About
@@ -52,35 +54,39 @@ function Header() {
             </li>
             <li className="nav-item">
               <NavLink
+                exact
                 to="/Insurance"
-                className="nav-links"
+                activeClassName="active"
+                className="nav-link"
                 onClick={handleClick}
               >
                 Insurances
               </NavLink>
             </li>
-            <li className="nav-item dropdown-li">
-              <div className="dropdown">
-                <button onClick={toggleDropdown} className="special">Specialities<img className="dropdown-icon" src={ddlogo} alt="dropdown"/></button>
+            <li className="nav-item">
+           
+                <NavLink onClick={toggleDropdown} className="nav-links">Specialities<MdOutlineArrowDropDownCircle className="dropdown-icon"/></NavLink>
                 {isOpen && (
-                  <ul>
+                  <ul className="dropdown-ul">
                     <li>
-                      <NavLink to="/orthopaedics">Orthopaedics</NavLink>
+                      <NavLink to="/Orthopaedics" >Orthopaedics</NavLink>
                     </li>
                     <li>
                       <NavLink to="/opthalmology">Ophthalmology</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/Neuro">Neuro Surgeon</NavLink>
+                      <NavLink to="/Neurology">Neuro Surgeon</NavLink>
                     </li>
                   </ul>
                 )}
-              </div>
+         
             </li>
             <li className="nav-item">
               <NavLink
+                exact
                 to="/book_an_appointment"
-                className="nav-links appointment"
+                activeClassName="active"
+                className="nav-link appointment"
                 onClick={handleClick}
               >
                 Appointment
@@ -94,7 +100,7 @@ function Header() {
             variant="dark"
             className="btn-app"
             onClick={() => {
-              navigate("/Appointment");
+              navigate("/book_an_appointment");
             }}
           >
             Appointment

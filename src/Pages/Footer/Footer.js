@@ -32,18 +32,18 @@ function Footer() {
             </div>
           </div>
           <div className="sec_div">
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div style={{ display: "flex", justifyContent: "space-between",width:"60%" }}>
               <div>
-                <Image style={{ marginTop: "50px" }} src={fb} alt="fb" />
+                <Image style={{ marginTop: "50px" }} src={fb} alt="facebook" />
               </div>
               <div>
-                <Image style={{ marginTop: "50px" }} src={insta} alt="insta" />
+                <Image style={{ marginTop: "50px" }} src={insta} alt="instagram" />
               </div>
               <div>
                 <Image
                   style={{ marginTop: "50px" }}
                   src={watsapp}
-                  alt="watsapp"
+                  alt="whatsapp"
                 />
               </div>
             </div>

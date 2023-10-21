@@ -1,10 +1,12 @@
 .Opthamain_container {
   margin: 0 3%;
 }
-
+.Opthoheader_cont {
+  margin-bottom: 144px;
+}
 .optha_heading {
   color: var(--text-icon-light-heading, #252525);
-
+ max-width: auto;
   /* Headings/H3/Regular */
   font-family: Outfit;
   font-size: 93px;
@@ -59,14 +61,14 @@
   flex-shrink: 0;
 }
 
-.service_button {
+.service_buttonOpt {
   width: 70%;
   justify-content: flex-end;
   background-color: #fff8f1;
   padding: 13px 0px;
   border-bottom: 1px solid var(--neutral-800, #e5e5e7);
   outline-style: hidden;
-  margin: 50px 0 0px 0px;
+  margin: 50px 10px 0px 0px;
   color: var(--text-icon-light-body, #3f454d);
   /* Headings/H5/Regular */
   font-family: Outfit;
@@ -150,6 +152,9 @@ li p {
 
 @media (max-width: 767px) {
   /* Your CSS rules for mobile devices go here */
+  .Opthoheader_cont {
+    margin-bottom: 72px;
+  }
   .optha_heading {
     color: var(--text-icon-light-heading, #252525);
     /* Headings/H2/Regular */
@@ -161,31 +166,57 @@ li p {
   }
   .optha_servicehead {
     color: var(--text-icon-light-heading, #252525);
-
+  
     /* Headings/H4/Regular */
     font-family: Outfit;
-    font-size: 45px;
+    font-size: 29px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 58px */
+    margin: 38px 0;
+  }
+
+  .opthasec1 {
+    color: var(--text-icon-light-body, #3f454d);
+    width: 90%;
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+    margin: 32px 0 24px 0px;
+  }
+  
+  .opthasec2 {
+    color: var(--text-icon-light-body, #3f454d);
+    width: 90%;
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
   }
   .sections_divoptha {
     margin: 80px 0px;
   }
 
-  .service_button {
-    max-width: 70%;
-    margin-right: 224px;
+  .service_buttonOpt {
+    max-width: 100%;
+    margin-right: 10px;
     justify-content: flex-end;
     background-color: #fff8f1;
     padding: 13px 0px;
     border-bottom: 1px solid var(--neutral-800, #e5e5e7);
     outline-style: hidden;
-    margin: 50px 0 0px 0px;
+    margin: 50px 10px 0px 0px;
     color: var(--text-icon-light-body, #3f454d);
     /* Headings/H5/Regular */
     font-family: Outfit;
-    font-size: 36px;
+    font-size: 19px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 36px */
@@ -215,6 +246,26 @@ li p {
     font-weight: 500;
     line-height: 100%; /* 58px */
     margin-bottom: 40px;
+  }
+  .sec_subhead {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H5/Regular */
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 36px */
+  }
+  li p{
+    color: var(--text-icon-light-heading, #252525);
+
+    /* Headings/H3/Regular */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 100%; /* 93px */
+    margin: 26px 0;
   }
   .spect_heading {
     color: var(--text-icon-light-heading, #252525);

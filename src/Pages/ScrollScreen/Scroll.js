@@ -8,59 +8,61 @@ import "./Scroll.css";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import { useEffect } from "react";
+import { CSSPlugin } from "gsap/CSSPlugin";
 
-
+// Register the plugin
+gsap.registerPlugin(CSSPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 function Scroll() {
-  gsap.registerPlugin(ScrollTrigger);
-    useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger)
+  useEffect(() => {
+    // Create a GSAP timeline
+    const tl = gsap.timeline();
 
-       // Create a GSAP timeline
-  const tl = gsap.timeline();
+    // Select all screen divs
+    const screens = gsap.utils.toArray(".screen");
 
-  // Select all screen divs
-  const screens = gsap.utils.toArray('.screen');
+    // Iterate through the screens and create animations
+    screens.forEach((screend, index) => {
+      // Calculate the screen width based on the number of screens
+      // const screenWidth = `${100 / screens.length}%`;
 
-  // Iterate through the screens and create animations
-  screens.forEach((screend, index) => {
-    // Calculate the screen width based on the number of screens
-    // const screenWidth = `${100 / screens.length}%`;
+      // Calculate the animation duration and delay
+      const duration = 1; // Animation duration in seconds
+      const delay = 5; // Delay between each screen in seconds
 
-    // Calculate the animation duration and delay
-    const duration = 1; // Animation duration in seconds
-    const delay = 5; // Delay between each screen in seconds
-
-    // Add animations to the timeline
-    tl.fromTo(
-      screend,
-      {
-        x: index === 0 ? '0%' : '100%', // Move each screen to the right initially
-        opacity: 1, // Initially hidden
-      },
-      {
-        x: 0 * (screend.length-1),
-        opacity: 1,
-        duration: duration,
-        scrollTrigger: {
-          trigger: screend,
-          start: index === 0 ? 'top top' : 'top bottom', // Start the animation at the top of the screen if it's the first screen, otherwise start at the bottom
-          end: "+=1000", // End at the bottom for the first screen, otherwise, end at the top
-          scrub: 1, // Smoothly scrub through the animation
-          toggleActions: 'play none none none',
-          pin:'true',
-          anticipatePin:1,
-          snap: {
-            snapTo: "labels", // snap to the closest label in the timeline
-            duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-            delay: 0.5, // wait 0.2 seconds from the last scroll event before doing the snapping
-            ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-          }, // Play animation on enter, pause on leave
+      // Add animations to the timeline
+      tl.fromTo(
+        screend,
+        {
+          x: index === 0 ? '0%' : '100%', // Move each screen to the right initially
+          opacity: 1, // Initially hidden
         },
-      },
-      `-=${delay}` // Delay each animation by a specified time
-    );
-  });
-}, []);
+        {
+          x: 1 * (screend.length - 1),
+          opacity: 1,
+          duration: duration,
+          scrollTrigger: {
+            trigger: screend,
+            start: index === 0 ? 'top top' : 'top bottom', // Start the animation at the top of the screen if it's the first screen, otherwise start at the bottom
+            end: '+=1000', // End at the bottom for the first screen, otherwise, end at the top
+            scrub: 1, // Smoothly scrub through the animation
+            toggleActions: 'play none none none',
+            pin: 'true',
+            anticipatePin: 1,
+            snap: {
+              snapTo: "labels", // snap to the closest label in the timeline
+              duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+              delay: 0.5, // wait 0.2 seconds from the last scroll event before doing the snapping
+              ease: 'power1.inOut', // the ease of the snap animation ("power3" by default)
+            }, // Play animation on enter, pause on leave
+          },
+        },
+        `-=${delay}` // Delay each animation by a specified time
+      );
+    });
+  }, []);
   return (
     <div>
       {/* screen1 */}
@@ -77,7 +79,12 @@ function Scroll() {
             </div>
           </Col>
           <Col>
-            <Image rounded className="img-fluid" src={lady} alt="lady_patient" />
+            <Image
+              rounded
+              className="img-fluid"
+              src={lady}
+              alt="lady_patient"
+            />
           </Col>
         </Row>
       </div>
@@ -96,7 +103,12 @@ function Scroll() {
             </div>
           </Col>
           <Col>
-            <Image rounded className="img-fluid" src={ladyorthodoc} alt="lady_patient" />
+            <Image
+              rounded
+              className="img-fluid"
+              src={ladyorthodoc}
+              alt="lady_patient"
+            />
           </Col>
         </Row>
       </div>
@@ -115,7 +127,12 @@ function Scroll() {
             </div>
           </Col>
           <Col className="image_card">
-            <Image rounded className="img-fluid" src={ladynurse} alt="lady_patient" />
+            <Image
+              rounded
+              className="img-fluid"
+              src={ladynurse}
+              alt="lady_patient"
+            />
           </Col>
         </Row>
       </div>

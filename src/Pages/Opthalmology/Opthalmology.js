@@ -17,17 +17,42 @@ import { useNavigate } from "react-router-dom";
 import "./Opthalmology.css";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import { useState } from "react";
+import LoadSpinner from "../Loading_Spinner/LoadSpinner";
+import { Helmet } from "react-helmet";
 
 function Opthalmology() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const navigateToOrthopaedics= () => {
+    setLoading(true); // Show loading component
+    setTimeout(() => {
+      navigate('/orthopaedics'); // Simulate navigation delay
+      setLoading(false); // Hide loading component after navigation
+    }, 2000); // Adjust the delay as needed
+  }
   useEffect(() => {
     // This code will run when the component is mounted
     window.scrollTo(0, 0); // Reset scroll position to the top
   }, []);
   return (
     <>
+    {loading ? <LoadSpinner /> :<>
+    <Helmet>
+        <title>
+         Opthalmology
+        </title>
+        <link rel="canonical" href="https://Visheshcountrycache.tech/opthalmology" />
+        <meta name='description' content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals." />
+         <meta name="keywords" content="visheshcountrycache,ortho hospital, Eye check, chaitanya hospital,best Eye hospital in tanuku,About,Contact"/>
+        <meta name="robots" content="index, follow" />
+         <html lang="en" />
+      </Helmet>
       <div className="Opthamain_container">
+      <div className="Opthoheader_cont">
         <Header />
+        </div>
         <Row>
           <Col md={8}>
             <div>
@@ -57,7 +82,7 @@ function Opthalmology() {
         <Row style={{ width: "100%", display: "flex", flexDirection: "row" }}>
           <Col xs={12} md={6}>
             <a href="#Cataract_Surgery">
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 Cataract Surgery{" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -65,7 +90,7 @@ function Opthalmology() {
               </Button>
             </a>
             <a href="#Phacoemulsification">
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 Phacoemulsification{" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -73,7 +98,7 @@ function Opthalmology() {
               </Button>
             </a>
             <a href="#LASIK">
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 LASIK{" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -82,7 +107,7 @@ function Opthalmology() {
             </a>
             <a href="#icls">
               {" "}
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 Implantable Collamer Lens (ICL){" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -92,7 +117,7 @@ function Opthalmology() {
           </Col>
           <Col xs={12} md={6}>
             <a href="#Pterygium">
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 Pterygium{" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -100,7 +125,7 @@ function Opthalmology() {
               </Button>
             </a>
             <a href="#Retinal_Injection">
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 Retinal Injection{" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -108,7 +133,7 @@ function Opthalmology() {
               </Button>
             </a>
             <a href="#Botox_Treatments">
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 Botox Treatments{" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -117,7 +142,7 @@ function Opthalmology() {
             </a>
             <a href="#Contact_Lens_Clinic">
               {" "}
-              <Button variant="light" className="service_button">
+              <Button variant="light" className="service_buttonOpt">
                 Contact Lens Clinic{" "}
                 <span style={{ float: "right" }}>
                   <Image src={arr} className="arr_optha_icon" />
@@ -144,7 +169,7 @@ function Opthalmology() {
                   navigate("/book_an_appointment");
                 }}
                 variant="outline-dark"
-                className="service_button1"
+                className="service_buttonOpt1"
               >
                 Book an Appointment
               </Button>
@@ -600,9 +625,7 @@ function Opthalmology() {
                 </div>
                 <div>
                   <Button
-                    onClick={() => {
-                      navigate("/orthopaedics");
-                    }}
+                    onClick={navigateToOrthopaedics}
                     className="service_button1"
                     variant="outline-dark"
                   >
@@ -655,7 +678,7 @@ function Opthalmology() {
             </Col>
           </Row>
         </div>
-      </div>
+      </div></>}
       <Footer />
     </>
   );

@@ -13,6 +13,7 @@ import ScrollText from "../ScrollText/ScrollText";
 import Testmonial from "../Testmonials/Testmonial";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const navigate =useNavigate();
@@ -22,6 +23,16 @@ function Home() {
   }, []);
   return (
     <>
+     <Helmet>
+        <title>
+         Home
+        </title>
+        <link rel="canonical" href="https://Visheshcountrycache.tech/home" />
+        <meta name='description' content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals." />
+         <meta name="keywords" content="visheshcountrycache,ortho hospital, Eye check, chaitanya hospital,best Eye hospital in tanuku,About,Contact"/>
+        <meta name="robots" content="index, follow" />
+         <html lang="en" />
+      </Helmet>
     <div className="main_container">
       <Row>
         <Header />
@@ -29,7 +40,7 @@ function Home() {
       <Container fluid>
         <Row>
           <Col md={8}>
-            <div style={{padding:"100px 0 0 0"}}>
+            <div className="hero_cont_m">
               <h1 className="main_heading">
                 Compassionate Care, Exceptional Results
               </h1>

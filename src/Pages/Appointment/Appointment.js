@@ -2,17 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import check from "../../Assets/Images/contact/contact1.jpg";
 import hall from "../../Assets/Images/contact/contact2.jpg";
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  Image,
-  Row,
-} from "react-bootstrap";
+import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import "./Appointment.css";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import { Helmet } from "react-helmet";
 
 function Appointment() {
   const [formData, setFormData] = useState({
@@ -59,9 +53,25 @@ function Appointment() {
 
   return (
     <>
-    
+      <Helmet>
+        <title>Book an Appointment</title>
+        <link
+          rel="canonical"
+          href="https://Visheshcountrycache.tech/book_an_appointment"
+        />
+        <meta
+          name="description"
+          content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals."
+        />
+        <meta
+          name="keywords"
+          content="visheshcountrycache,ortho hospital, Eye check, chaitanya hospital,best Eye hospital in tanuku,About,Contact"
+        />
+        <meta name="robots" content="index, follow" />
+        <html lang="en" />
+      </Helmet>
       <div className="appointment_container">
-      <Header />
+        <Header />
         <h1 className="app_heading">Contact Us</h1>
         <div className="app_sub_p">
           <p className="app_text_p">
@@ -71,9 +81,9 @@ function Appointment() {
           </p>
         </div>
 
-        <Container>
+        <Container fluid>
           <Row style={{ padding: "12px" }}>
-            <Col sm={12} md={6} style={{ margin: "0px" }}>
+            <Col sm={12} md={6} style={{ marginRight: "50px" }}>
               <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
                   <Form.Group as={Col} controlId="formGridFirstName">
@@ -149,7 +159,10 @@ function Appointment() {
                     <Form.Label className="label">Time</Form.Label>
                     <Form.Control
                       className="Control"
-                      type="email"
+                      type="time"
+                      name="time"
+                      onChange={handleInputChange}
+                      value={formData.time}
                       placeholder="00:00 AM"
                     />
                   </Form.Group>
@@ -181,7 +194,7 @@ function Appointment() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    style={{height:"300px"}}
+                    style={{ height: "300px" }}
                   />
                 </Form.Group>
                 <Button className="Control1" variant="dark" type="submit">
@@ -197,13 +210,13 @@ function Appointment() {
                 margin: "0px",
               }}
               sm={12}
-              md={6}
+              md={5}
             >
               <Image
                 className="img-fluid"
                 src={check}
                 alt="contact"
-                style={{ borderRadius: "32px" }}
+                style={{ borderRadius: "32px", maxHeight: "973px" }}
               />
             </Col>
           </Row>
@@ -211,15 +224,15 @@ function Appointment() {
             <Row>
               <Col sm={12} md={8} style={{ padding: "69px" }}>
                 <Row>
-                    <Col>
-                      <h1 className="app_addr_h">Contact Numbers</h1>
-                      <p className="app_addr_p">08819 - 229585</p>
-                      <p className="app_addr_p">08819 - 229586</p>
-                    </Col>
-                    <Col>
-                      <h1 className="app_addr_h">Email</h1>
-                      <p className="app_addr_p">Chaitanyaortho1989@gmail.com</p>
-                    </Col>
+                  <Col>
+                    <h1 className="app_addr_h">Contact Numbers</h1>
+                    <p className="app_addr_p">08819 - 229585</p>
+                    <p className="app_addr_p">08819 - 229586</p>
+                  </Col>
+                  <Col>
+                    <h1 className="app_addr_h">Email</h1>
+                    <p className="app_addr_p">Chaitanyaortho1989@gmail.com</p>
+                  </Col>
                 </Row>
                 <Row>
                   <h1 className="app_addr_h">Address</h1>
@@ -231,7 +244,16 @@ function Appointment() {
                 </Row>
               </Col>
               <Col sm={12} md={4} style={{ padding: "69px" }}>
-                <p>Google maps</p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477.5495139273673!2d81.67762659601236!3d16.75695704857599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37b70322cf445b%3A0x1fabbfe8a070c97c!2sSRI%20RAMALINGESWARA%20MEDICAL%20%26%20SURGICAL%20AGENCIES!5e0!3m2!1sen!2sin!4v1697885315344!5m2!1sen!2sin"
+                  width="400"
+                  height="300"
+                  style={{borderRadius: "24px",border: "1px solid var(--neutral-1000, #A1A4AC)"}}
+                  title="Google Map of Sri Krishna Chaitanya hospitals"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </Col>
             </Row>
           </div>

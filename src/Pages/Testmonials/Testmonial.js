@@ -11,20 +11,17 @@ function Testmonial() {
       <div>
         <h1 className="testimonial_heading">Patient Experiences</h1>
       </div>
-      <div style={{margin:"0 15px 0 0"}}>
-        <Carousel interval={1000}>
-          <Carousel.Item style={{margin:"0 20px 0 20px"}}>
+      <div>
+        <Carousel interval={2000}>
+          <Carousel.Item>
             <Row className="carousel_Cont">
               <Col md={4}>
                 <div>
                   <Image
                     rounded
+                    fluid
                     className="img-fluid"
-                    style={{
-                      height: "400px",
-                      width: "400px",
-                      objectFit: "cover",
-                    }}
+                    id="testi_imgs"
                     src={test1}
                     alt="emergency"
                   />
@@ -44,7 +41,7 @@ function Testmonial() {
                 >
                   <div>
                     {" "}
-                    <Image className="img-fluid" src={group} alt="0.." />
+                    <Image className="img-fluid" fluid id="testi_imgs2" src={group} alt="0.." />
                   </div>
                   <div>
                     <p className="testimo_subtex">
@@ -62,18 +59,15 @@ function Testmonial() {
               </Col>
             </Row>
           </Carousel.Item>
-          <Carousel.Item sstyle={{margin:"0 20px 0 20px"}}>
+          <Carousel.Item>
             <Row className="carousel_Cont">
               <Col md={4}  >
                 <div>
                   <Image
                     rounded
+                    fluid
                     className="img-fluid"
-                    style={{
-                      height: "400px",
-                      width: "400px",
-                      objectFit: "cover",
-                    }}
+                    id="testi_imgs"
                     src={test2}
                     alt="emergency"
                   />
@@ -93,7 +87,7 @@ function Testmonial() {
                 >
                   <div>
                     {" "}
-                    <Image className="img-fluid" src={group} alt="00." />
+                    <Image className="img-fluid"  id="testi_imgs2" src={group} alt="00." />
                   </div>
                   <div>
                     {" "}

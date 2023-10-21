@@ -41,6 +41,7 @@ import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import { Helmet } from "react-helmet";
 
 function Insurance() {
   const navigate = useNavigate();
@@ -78,6 +79,16 @@ function Insurance() {
   ];
   return (
     <>
+     <Helmet>
+        <title>
+          Insurance
+        </title>
+        <link rel="canonical" href="https://Visheshcountrycache.tech/Insurance" />
+        <meta name='description' content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals." />
+         <meta name="keywords" content="visheshcountrycache,ortho hospital, bone fracture, chaitanya hospital,best Insurance provided by hospital in tanuku"/>
+        <meta name="robots" content="index, follow" />
+         <html lang="en" />
+      </Helmet>
     <div className="insurance_container">
       <Header />
       <div className="insu1_cont">
@@ -99,7 +110,7 @@ function Insurance() {
               </p>
             </Col>
             <Col sm={12} md={4}>
-              <Image src={shield} alt="shield" className="centerd-img" />
+              <Image src={shield} alt="shield" fluid className="centerd-img" />
             </Col>
           </Row>
         </Container>
@@ -126,7 +137,7 @@ function Insurance() {
               navigate("/book_an_appointment");
             }}
             variant="outline-dark"
-            className="service_button1"
+            className="service_buttons1"
           >
             Contact Us
           </Button>
@@ -187,24 +198,24 @@ function Insurance() {
           </Col>
         </Row>
       </div>
-      <div className="insu5_cont">
+      <div className="insurance_container">
         <ul className="insu5_cont_ul">
           <li>
-            <p>
+            <p className="insu_p1">
               We are committed to working closely with our insurance partners to
               ensure that you receive the maximum benefits available under your
               policy.
             </p>
           </li>
           <li>
-            <p>
+            <p className="insu_p1">
               Please be aware that while we strive to provide accurate
               information, it's essential to verify your coverage with your
               insurance provider to avoid any unexpected costs.
             </p>
           </li>
           <li>
-            <p>
+            <p className="insu_p1">
               If you have any inquiries about our insurance partnerships or need
               assistance, our friendly staff is here to help you navigate the
               insurance process.
