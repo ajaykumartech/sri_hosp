@@ -83,18 +83,13 @@
 .btn-app {
   border-radius: 8px;
   display: inline-flex;
-  padding: 9px 26px 9px 26px;
+  padding: 16px 26px 18px 26px;
   justify-content: center;
   align-items: center;
   background-color: #000000;
   position: relative;
-  top: 14px;
+  top: 10px;
   color: white;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 30px */
-  letter-spacing: 0.4px;
-  font-size: 20px;
 }
 .nav-icon {
   display: flex;
@@ -130,8 +125,6 @@
     margin-top: 4px;
     margin-left: 2px;
   }
-  .dropdown-ul {
-  }
 
   .dropdown-ul li {
     background-color: rgb(255, 255, 255);
@@ -163,7 +156,7 @@
     list-style: none;
     margin-top: 9px;
     margin-right: 400px;
-    width: 104%;
+    width: 195vh;
     display: none;
   }
   .nav-menu.active {
@@ -173,7 +166,7 @@
     align-items: center;
     list-style: none;
     margin-top: 9px;
-    gap: 20vh;
+    gap: 13vh;
   }
   .nav-item {
     position: relative;
@@ -207,18 +200,13 @@
   .btn-app {
     border-radius: 8px;
     display: inline-flex;
-    padding: 9px 26px 9px 26px;
+    padding: 16px 26px 18px 26px;
     justify-content: center;
     align-items: center;
     background-color: #000000;
     position: relative;
     top: 10px;
     color: white;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 30px */
-    letter-spacing: 0.4px;
-    font-size: 20px;
   }
   .nav-icon {
     display: flex;

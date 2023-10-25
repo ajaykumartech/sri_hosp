@@ -2,7 +2,7 @@ body {
   margin: 0;
   @font-face {
     font-family: outfit;
-    src: url("../src/Assets/Fonts/Outfit-Regular.otf")  format('opentype');
+    src: url("../src/Assets/Fonts/Outfit-Regular.ttf")  format('truetype');
   }
   font-family: 'outfit', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

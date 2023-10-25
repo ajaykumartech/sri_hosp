@@ -26,8 +26,8 @@ function Header() {
         <img
           alt="logo1"
           src={logo}
-          className="logo"
-          style={{ width: "auto", height:'150px' }}
+          className="img-fluid"
+          style={{ maxWidth: "164px", maxHeight:"121px" }}
         />
       </NavLink>
 
