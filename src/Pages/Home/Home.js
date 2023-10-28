@@ -17,6 +17,7 @@ import { Helmet } from "react-helmet";
 
 function Home() {
   const navigate =useNavigate();
+
   useEffect(() => {
     // This code will run when the component is mounted
     window.scrollTo(0, 0); // Reset scroll position to the top
@@ -28,7 +29,7 @@ function Home() {
          Home
         </title>
         <link rel="canonical" href="https://Visheshcountrycache.tech/home" />
-        <meta name='description' content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals." />
+        <meta name='description' content="Get the best Orthopeadician for your health with Sri chaitanya hospitals." />
          <meta name="keywords" content="visheshcountrycache,ortho hospital, Eye check, chaitanya hospital,best Eye hospital in tanuku,About,Contact"/>
         <meta name="robots" content="index, follow" />
          <html lang="en" />
@@ -36,6 +37,7 @@ function Home() {
     <div className="main_container">
       <Row>
         <Header />
+  
       </Row>
       <Container fluid>
         <Row>

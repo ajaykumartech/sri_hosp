@@ -43,15 +43,15 @@
   .screens4 {
     background-color: #fff;
     color: #252525;
-    animation: slide-down 2s ease-in-out both;
+    animation: slide-up 2s ease-in-out both;
   }
   .screens5 {
-    background-color: #FFF8F1 ;
+    float: right;
+    display: flex;
+    flex-direction: initial;
+    opacity: 0.6;
   }
-  .screens6 {
-    background-color: #FFF8F1 ;
-    height: auto;
-  }
+ 
   
   @keyframes fade-in {
     from {

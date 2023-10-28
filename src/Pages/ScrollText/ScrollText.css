@@ -8,9 +8,10 @@
   font-family: Outfit;
   font-size: 151px;
   font-style: normal;
-  font-weight: 600;
+  letter-spacing: 5px;
   line-height: 100%; /* 151px */
-  color: var(--text-icon-light-heading,#775634);
+  color: #fff;
+  -webkit-text-stroke:1px black ;
 }
 .testimonial_p1 {
   color: var(--text-icon-light-heading, #252525);
@@ -21,6 +22,7 @@
   font-weight: 400;
   line-height: 100%; /* 58px */
   max-width: 785px;
+  margin-left: 35px;
 }
 
 .test_cont {
@@ -51,12 +53,12 @@
     height: auto;
   }
   .scrollText {
-    /* Headings/H1/SemiBold */
+    color: var(--text-icon-light-heading, #252525);
     font-family: Outfit;
-    font-size: 71px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%; /* 151px */
+    line-height: 130%; /* 36.4px */
   }
   .grid_2 {
     margin: 0 0 20px 0px;

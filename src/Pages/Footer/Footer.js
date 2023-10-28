@@ -26,8 +26,7 @@ function Footer() {
               </h3>
               <p id="p">Opp: S.M.V.M Polytechnic College,</p>
               <p id="p">
-                <p id="p">Vinnukota Street, Sajjapuram</p>
-              </p>
+                Vinnukota Street, Sajjapuram</p>
               <p id="p">Tanuku, Andhra pradesh</p>
             </div>
           </div>

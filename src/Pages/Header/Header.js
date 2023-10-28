@@ -4,9 +4,10 @@ import logo from "../../Assets/Images/Logo.png";
 
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import {MdOutlineArrowDropDownCircle} from "react-icons/md";
-import { FaBars } from "react-icons/fa";
-import { FaTimes } from "react-icons/fa";
+import { MdOutlineArrowDropDown } from "react-icons/md";
+
+import { RxHamburgerMenu } from "react-icons/rx";
+import { TfiClose } from "react-icons/tfi";
 
 function Header() {
   const navigate = useNavigate();
@@ -22,12 +23,12 @@ function Header() {
   };
   return (
     <div className="main">
-      <NavLink to="/Home" activeClassName="active" onClick={handleClick}>
+      <NavLink to="/Home" onClick={handleClick}>
         <img
           alt="logo1"
           src={logo}
-          className="img-fluid"
-          style={{ maxWidth: "164px", maxHeight:"121px" }}
+          className="logo-icon"
+          style={{ maxWidth: "164px", maxHeight: "121px" }}
         />
       </NavLink>
 
@@ -42,50 +43,41 @@ function Header() {
         <div className="nav-link-group">
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <NavLink
-                exact
-                to="/About"
-                activeClassName="active"
-                className="nav-link"
-                onClick={handleClick}
-              >
+              <NavLink to="/About" className="nav-link" onClick={handleClick}>
                 About
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink
-                exact
                 to="/Insurance"
-                activeClassName="active"
-                className="nav-link"
+                className="nav-link nav-insurance"
                 onClick={handleClick}
               >
                 Insurances
               </NavLink>
             </li>
             <li className="nav-item">
-           
-                <NavLink onClick={toggleDropdown} className="nav-links">Specialities<MdOutlineArrowDropDownCircle className="dropdown-icon"/></NavLink>
-                {isOpen && (
-                  <ul className="dropdown-ul">
-                    <li>
-                      <NavLink to="/Orthopaedics" >Orthopaedics</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/opthalmology">Ophthalmology</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/Neurology">Neuro Surgeon</NavLink>
-                    </li>
-                  </ul>
-                )}
-         
+              <NavLink onClick={toggleDropdown} className="nav-links">
+                Specialities
+                <MdOutlineArrowDropDown className="dropdown-icon" />
+              </NavLink>
+              {isOpen && (
+                <ul className="dropdown-ul">
+                  <li>
+                    <NavLink to="/Orthopaedics">Orthopaedics</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/opthalmology">Ophthalmology</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/Neurology">Neuro Surgeon</NavLink>
+                  </li>
+                </ul>
+              )}
             </li>
             <li className="nav-item">
               <NavLink
-                exact
                 to="/book_an_appointment"
-                activeClassName="active"
                 className="nav-link appointment"
                 onClick={handleClick}
               >
@@ -95,9 +87,8 @@ function Header() {
           </ul>
         </div>
         <div className="nav-icon" onClick={handleClick}>
-          <i className="icons">{click ? <FaTimes /> : <FaBars />}</i>
+          <i className="icons">{click ? <TfiClose /> : <RxHamburgerMenu />}</i>
           <button
-            variant="dark"
             className="btn-app"
             onClick={() => {
               navigate("/book_an_appointment");

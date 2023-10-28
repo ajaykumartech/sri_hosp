@@ -81,6 +81,25 @@ p {
   .doctors_container {
     margin: 124px 0 59px 0;
   }
+  .doct_name {
+    margin: 35px 0 24px 0;
+    color: var(--text-icon-light-heading, #252525);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 36px */
+  }
+  p {
+    color: var(--base-balck, #000);
+    /* Body/TextL/Regular */
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.48px;
+  }
   .doct_maintext {
     color: var(--base-balck, #000);
     /* Headings/H3/Regular */
@@ -117,7 +136,7 @@ p {
     transition: transform 0.5s ease;
     transform: scale(1.1); /* Scale the image to 110% on hover */
   }
-  
+
   .card1:hover {
     height: 400px;
     overflow: hidden;
@@ -130,15 +149,7 @@ p {
 /* Styles for screens with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Your CSS rules for tablets go here */
-  .main_heading {
-    color: var(--text-icon-light-heading, #252525);
-    /* Headings/H2/Regular */
-    font-family: Outfit;
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 120px */
-  }
+
   .doct_maintext {
     color: var(--base-balck, #000);
     /* Headings/H3/Regular */
@@ -155,28 +166,9 @@ p {
 /* Styles for screens with a minimum width of 992px and a maximum width of 1199px (e.g., small desktops) */
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Your CSS rules for small desktops go here */
-  .main_heading {
-    color: var(--text-icon-light-heading, #252525);
-    /* Headings/H2/Regular */
-    font-family: Outfit;
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 120px */
-  }
 }
 
 /* Styles for screens with a minimum width of 1200px and above (e.g., large desktops) */
 @media (min-width: 1200px) {
   /* Your CSS rules for large desktops go here */
-  .main_heading {
-    color: var(--text-icon-light-heading, #252525);
-    /* Headings/H2/Regular */
-    font-family: Outfit;
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 120px */
-  }
 }
- 

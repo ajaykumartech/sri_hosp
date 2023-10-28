@@ -28,9 +28,9 @@ gsap.registerPlugin(ScrollTrigger)
     const createLetterAnimations = (textElement, colors) => {
       const letters = textElement.textContent.split('');
       const letterSpans = letters.map((letter, index) => {
-        const span = document.createElement('span');
+        const span = document.getElementsByClassName('scrollText');
         span.textContent = letter;
-        textElement.appendChild(span);
+       
         return span;
       });
 
@@ -46,19 +46,36 @@ gsap.registerPlugin(ScrollTrigger)
 
     // Apply color change animations to the text
     const textContainer = document.querySelector('.scroll_textCont'); // Replace with your container element
-    createLetterAnimations(textContainer, ['red', 'blue', 'green']); // Change to the desired colors
+    createLetterAnimations(textContainer, ['#f3f4']); // Change to the desired colors
 
-    // Ensure to clean up ScrollTrigger when the component unmounts
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+  
   }, []);
 
 
   return (
     <>
       <div className="scroll_textCont">
-        <h1 className="scrollText">CARE. TRUST. HEALTH</h1>
+        <h1>
+          <span className="scrollText">C</span>
+          <span className="scrollText">A</span>
+          <span className="scrollText">R</span>
+          <span className="scrollText">E</span>
+          <span className="scrollText">.</span>
+          <span className="scrollText">{' '}</span>
+          <span className="scrollText">T</span>
+          <span className="scrollText">R</span>
+          <span className="scrollText">U</span>
+          <span className="scrollText">S</span>
+          <span className="scrollText">T</span>
+          <span className="scrollText">.</span>
+          <span className="scrollText">{' '}</span>
+          <span className="scrollText">H</span>
+          <span className="scrollText">E</span>
+          <span className="scrollText">A</span>
+          <span className="scrollText">L</span>
+          <span className="scrollText">T</span>
+          <span className="scrollText">H</span>
+          </h1>
       </div>
       <div>
   <div

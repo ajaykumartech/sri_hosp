@@ -61,7 +61,7 @@ function Appointment() {
         />
         <meta
           name="description"
-          content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals."
+          content="Get the best Orthopeadician for your health with Sri chaitanya hospitals."
         />
         <meta
           name="keywords"
@@ -259,7 +259,7 @@ function Appointment() {
                       borderRadius: "24px",
                       border: "1px solid var(--neutral-1000, #A1A4AC)",
                     }}
-                    title="Google Map of Sri Krishna Chaitanya hospitals"
+                    title="Google Map of Sri Chaitanya hospitals"
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

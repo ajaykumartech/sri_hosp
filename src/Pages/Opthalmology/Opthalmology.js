@@ -44,7 +44,7 @@ function Opthalmology() {
          Opthalmology
         </title>
         <link rel="canonical" href="https://Visheshcountrycache.tech/opthalmology" />
-        <meta name='description' content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals." />
+        <meta name='description' content="Get the best Orthopeadician for your health with Sri chaitanya hospitals." />
          <meta name="keywords" content="visheshcountrycache,ortho hospital, Eye check, chaitanya hospital,best Eye hospital in tanuku,About,Contact"/>
         <meta name="robots" content="index, follow" />
          <html lang="en" />
@@ -163,7 +163,7 @@ function Opthalmology() {
             </section>
           </Col>
           <Col md={3}>
-            <div>
+            <div style={{marginTop:"15px"}}>
               <Button
                 onClick={() => {
                   navigate("/book_an_appointment");

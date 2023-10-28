@@ -159,7 +159,7 @@ li p {
     color: var(--text-icon-light-heading, #252525);
     /* Headings/H2/Regular */
     font-family: Outfit;
-    font-size: 50px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 120px */

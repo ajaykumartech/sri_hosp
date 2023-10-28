@@ -48,7 +48,7 @@ function Orthopaedic() {
          Orthopaedics
         </title>
         <link rel="canonical" href="https://Visheshcountrycache.tech/orthopaedics" />
-        <meta name='description' content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals." />
+        <meta name='description' content="Get the best Orthopeadician for your health with Sri chaitanya hospitals." />
          <meta name="keywords" content="visheshcountrycache,ortho hospital, knee fracture, chaitanya hospital,best Ortho hospital in tanuku,bones,krishnareddy hospital"/>
         <meta name="robots" content="index, follow" />
          <html lang="en" />
@@ -198,7 +198,7 @@ function Orthopaedic() {
                   navigate("/book_an_appointment");
                 } }
                 variant="outline-dark"
-                className="service_buttonOrth1"
+                className="service_button1"
               >
                 Book an Appointment
               </Button>

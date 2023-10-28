@@ -5,6 +5,7 @@ import { Image } from "react-bootstrap";
 import opta from "../../Assets/Images/eyeLoad.png";
 import orto from "../../Assets/Images/OrthoLoad.png";
 import neuro from "../../Assets/Images/neuroLoad.png";
+import dero from "../../Assets/Images/muscleman.png";
 
 function Loading() {
   const [currentScreen, setCurrentScreen] = useState(1);
@@ -13,7 +14,7 @@ function Loading() {
   useEffect(() => {
     const transitionScreens = (screenNumber) => {
       // Set a maximum screen number, e.g., 4
-      const maxScreenNumber = 6;
+      const maxScreenNumber = 5;
 
       // If the current screen number is less than the maximum
       if (screenNumber <= maxScreenNumber) {
@@ -69,20 +70,10 @@ function Loading() {
           </div>
         </div>
       )}
+
       {currentScreen === 5 && (
         <div className={`screen screens${currentScreen}`}>
-           <div style={{ display: "flex", flexDirection: "row" }}>
-           
-          </div>
-        </div>
-      )}
-      {currentScreen === 6 && (
-        <div className={`screens screens${currentScreen}`}>
-           <div style={{ display: "flex", flexDirection: "column" }}>
-            <h2> hello</h2>
-            <Image src={neuro} alt="Orthopaedic_logo" />
-          </div>
-         
+          <Image src={dero} className="img_fluid" alt="Orthopaedic_logo" />
         </div>
       )}
     </div>

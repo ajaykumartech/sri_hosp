@@ -1,13 +1,17 @@
-
+.image_card_scroll{
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .screen {
-  overscroll-behavior: none;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  justify-content: center;
+}
 .screen1 {
   width: 100%;
   height: 1080px;
@@ -17,20 +21,20 @@
 }
 
 .screen2 {
-    width: 100%;
-    height: 1080px;
-    flex-shrink: 0;
-    background-color:#D7C0D0;
-    padding: 112px;
-  }
+  width: 100%;
+  height: 1080px;
+  flex-shrink: 2;
+  background-color: #d7c0d0;
+  padding: 112px;
+}
 
-  .screen3 {
-    width: 100%;
-    height: 1080px;
-    flex-shrink: 0;
-    background-color: #FFDBC3;
-    padding: 112px;
-  }
+.screen3 {
+  width: 100%;
+  height: 1080px;
+  flex-shrink: 0;
+  background-color: #ffdbc3;
+  padding: 112px;
+}
 
 .scroll_p {
   color: var(--text-icon-light-heading, #252525);
@@ -55,7 +59,7 @@
 
 .scroll_sub {
   display: flex;
-  width: 773px;
+  max-width: 773px;
   padding-top: 47px;
   flex-direction: column;
   justify-content: flex-end;
@@ -63,44 +67,74 @@
   gap: 107px;
 }
 
+
+  .centered_img {
+    display: block;
+    margin: 0 auto; /* Horizontally center the image */
+    text-align: center;
+    width: 90%;
+    height: auto;
+    padding: 0px;
+  }
+
+
+
 @media (max-width: 767px) {
   .screen {
-    width: 100%;
-    height: 98vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Hide horizontal overflow */
+    overscroll-behavior: none;
+    width: auto;
+    height: auto;
   }
-  scroll_p {
+  .screen1 {
+    width: 100%;
+    height: auto;
+    flex-shrink: 1;
+    background-color: #abad8b;
+    padding: 66px;
+  }
+
+  .screen2 {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    background-color: #d7c0d0;
+    padding: 66px;
+  }
+
+  .screen3 {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    background-color: #ffdbc3;
+    padding: 66px;
+  }
+
+  .scroll_p {
     color: var(--text-icon-light-heading, #252525);
     /* Headings/H5/Regular */
     font-family: Outfit;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 36px */
   }
-  
+
   .scroll_head {
     color: var(--text-icon-light-heading, #252525);
-  
+
     /* Headings/H3/Medium */
     font-family: Outfit;
-    font-size: 45px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 93px */
   }
-  
+
   .scroll_sub {
     display: flex;
-    width: 773px;
-    padding-top: 47px;
+    max-width: 773px;
+    padding-top: 16px;
+    font-size: 16px;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 107px;
   }
-
 }

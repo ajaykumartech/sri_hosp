@@ -62,7 +62,7 @@ function About() {
         <link rel="canonical" href="https://Visheshcountrycache.tech/about" />
         <meta
           name="description"
-          content="Get the best Orthopeadician for your health with Sri krishnachaitanya hospitals."
+          content="Get the best Orthopeadician for your health with Sri chaitanya hospitals."
         />
         <meta
           name="keywords"
@@ -90,7 +90,7 @@ function About() {
           </Row>
         </div>
         <div>
-          <Image className="about_img_cont" src={hosp} fluid alt="hospital" />
+          <Image className="about_img_cont"  src={hosp}  alt="hospital" />
         </div>
         <h1 className="about_head2">
           We hold the belief that this represents one of most crucial and
@@ -102,17 +102,17 @@ function About() {
               <Row>
                 <Col sm={12} md={6} className="image1_abt">
                   <Image
+                  fluid
                     src={krish2}
                     alt="Image 1"
-                    fluid
                     style={{ zIndex: 2 }} // Adjust the zIndex to control the image stacking
                   />
                 </Col>
                 <Col sm={12} md={6} className="image2_abt">
                   <Image
                     src={krish1}
-                    alt="Image 2"
                     fluid
+                    alt="Image 2"
                     style={{ zIndex: 1, width: "500px" }} // Adjust the zIndex to control the image stacking
                   />
                 </Col>

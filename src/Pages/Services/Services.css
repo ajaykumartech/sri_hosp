@@ -216,15 +216,7 @@ border:none;
 /* Styles for screens with a minimum width of 992px and a maximum width of 1199px (e.g., small desktops) */
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Your CSS rules for small desktops go here */
-  .main_heading {
-    color: var(--text-icon-light-heading, #252525);
-    /* Headings/H2/Regular */
-    font-family: Outfit;
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 120px */
-  }
+ 
 }
 
 /* Styles for screens with a minimum width of 1200px and above (e.g., large desktops) */
