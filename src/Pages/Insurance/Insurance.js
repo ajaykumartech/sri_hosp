@@ -148,7 +148,7 @@ function Insurance() {
           <Col md={4}>
             <Card className="card_insurance">
               <Row className="insuicon_contact">
-                <div className="img_back">
+                <div className="img_backs">
                   <Image className="centeraed_imgs" src={icon31} alt="varun" />
                 </div>
               </Row>
@@ -165,7 +165,7 @@ function Insurance() {
           <Col md={4}>
             <Card className="card_insurance">
               <Row className="insuicon_contact">
-                <div className="img_back">
+                <div className="img_backs">
                   <Image className="centeraed_imgs" src={icon32} alt="varun" />
                 </div>
               </Row>
@@ -182,7 +182,7 @@ function Insurance() {
           <Col md={4}>
             <Card className="card_insurance">
               <Row className="insuicon_contact">
-                <div className="img_back">
+                <div className="img_backs">
                   <Image className="centeraed_imgs" src={icon33} alt="varun" />
                 </div>
               </Row>

@@ -72,7 +72,10 @@ function Home() {
       
     </div>
     <Scroll />
+    <Row>
     <ScrollText />
+    </Row>
+   
     
     <div className="main_container">
     <Testmonial />

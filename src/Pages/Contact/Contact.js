@@ -37,7 +37,7 @@ function Contact() {
             <Row className="contact_group">
               <h2 className="contact_h2">Contact Us</h2>
               <div className="contact_content">
-                <p className="contact_content">08819-234455</p>
+                <section className="contact_content">08819-234455</section>
                 <p className="contact_content">08819-22456</p>
               </div>
               <label className="contact_label">E-mail:</label>
@@ -55,8 +55,8 @@ function Contact() {
             <Row className="contact_group">
               <h2 className="contact_h2">Working Hours</h2>
               <div className="contact_content">
-                <p className="contact_content">Monday-Saturday</p>
-                <p className="contact_content">9:00 AM - 2:00 PM</p>
+                <section className="contact_content">Monday-Saturday</section>
+                <section className="contact_content">9:00 AM - 2:00 PM</section>
                 <p className="contact_content">5:00 PM - 7:00 PM</p>
               </div>
               <p className="contact_links">24/7 Emergency Services</p>

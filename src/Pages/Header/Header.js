@@ -36,7 +36,7 @@ function Header() {
         className="main-div"
         style={{
           display: "flex",
-          justifyContent: "flex-end",
+          flexDirection:"row",
           alignItems: "center",
         }}
       >
