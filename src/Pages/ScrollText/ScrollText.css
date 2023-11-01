@@ -78,3 +78,52 @@
     margin: 0 0 20px 0px;
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1520px) {
+  .testimonial_p1 {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H4/Regular */
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 58px */
+    max-width: 385px;
+  }
+  .test_cont {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   /* Your CSS rules for mobile devices go here */
+   .testimonial_p1 {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H4/Regular */
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 58px */
+    max-width: 385px;
+  }
+  .test_cont {
+    width: auto;
+    height: auto;
+  }
+  .text {
+    color: var(--text-icon-light-heading, #252525);
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%; /* 36.4px */
+  }
+  .grid_2 {
+    margin: 0 0 20px 0px;
+  }
+  .grid_3{
+    margin: 0 0 20px 0px;
+  }
+}

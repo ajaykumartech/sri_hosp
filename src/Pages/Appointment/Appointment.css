@@ -168,11 +168,11 @@
   margin-bottom: 23px;
 }
 .app_card_map2 {
-  padding: 5px;
+  padding: 35px;
 }
 
 .app_card_map1 {
-  padding: 69px;
+  padding: 35px;
 }
 
 @media (max-width: 767px) {
@@ -181,7 +181,7 @@
     padding: 34px;
   }
   .app_card_map2 {
-    padding: 34px;
+    padding: 5px;
   }
  
   .app_heading {
@@ -271,4 +271,151 @@
     line-height: 150%; /* 36px */
     letter-spacing: 0.48px;
   }
+  .label {
+    color: var(--text-icon-light-body, #3f454d);
+    /* Body/Text/Regular */
+    font-family: Outfit;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.44px;
+  }
+  
+  .Control {
+    height: 75px;
+    border-radius: 8px;
+    border: 1px solid var(--neutral-900, #c1c3c7);
+    color: var(--text-icon-light-body, #3f454d);
+    /* Body/Text/Light */
+    font-family: Outfit;
+    font-size: 18px;
+    padding: 10px 0px 11px 20px;
+    margin: 0px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.44px;
+    background-color: #fff8f1;
+  }
+  
+  .Control1 {
+    display: flex;
+    width: 146px;
+    padding: 10px 30px 11px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--grey-1000, #252525);
+    color: var(--text-icon-dark-heading, #fcfcfc);
+    /* Button/btn-text/Large/Regular */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.44px;
+    margin-bottom: 24px;
+  }
+}
+@media (min-width:768px) and (max-width:1520px) {
+    /* Your CSS rules for mobile devices go here */
+    .app_card_map1 {
+      padding: 34px;
+    }
+    .app_card_map2 {
+      padding: 5px;
+      position: relative;
+      overflow: hidden;
+      width: auto;
+    }
+   
+    .app_heading {
+      color: var(--text-icon-light-heading, #252525);
+      /* Headings/H3/Regular */
+      font-family: Outfit;
+      font-size: 46px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 93px */
+      text-align: center;
+      margin: 72px 0 18px 0;
+    }
+    
+    .app_sub_p {
+      color: var(--text-icon-light-body, #3f454d);
+      text-align: center;
+      /* Body/TextL/Regular */
+      font-family: Outfit;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 36px */
+      letter-spacing: 0.48px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 0;
+    }
+    .app_text_p{
+      color: var(--text-icon-light-body, #3f454d);
+      text-align: center;
+      /* Body/TextL/Regular */
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 36px */
+      letter-spacing: 0.48px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 0 20% 94px 20%;
+    }
+    .app_addr_p {
+      color: var(--text-icon-light-body, #3f454d);
+    
+      /* Body/TextL/Regular */
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      overflow:auto;
+      line-height: 1.5; /* 36px */
+      letter-spacing: 0.48px;
+    }
+    .app_addr_h {
+      color: var(--text-icon-light-heading, #252525);
+      /* Headings/H5/SemiBold */
+      font-family: Outfit;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; /* 36px */
+      margin-bottom: 23px;
+    }
+    .hall_text {
+      color: var(--text-icon-dark-heading, #fcfcfc);
+      text-align: center;
+      /* Headings/H4/Medium */
+      font-family: Outfit;
+      font-size: 29px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 58px */
+    }
+    
+    .hall_text_p {
+      color: var(--text-icon-dark-heading, #fcfcfc);
+      text-align: center;
+    
+      /* Body/TextL/Regular */
+      font-family: Outfit;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 36px */
+      letter-spacing: 0.48px;
+    }
 }

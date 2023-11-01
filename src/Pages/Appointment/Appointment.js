@@ -86,7 +86,7 @@ function Appointment() {
             <Col sm={12} md={6} style={{ marginRight: "50px" }}>
               <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridFirstName">
+                  <Form.Group as={Col} md controlId="formGridFirstName">
                     <Form.Label className="label">First Name</Form.Label>
                     <Form.Control
                       className="Control"
@@ -99,7 +99,7 @@ function Appointment() {
                     />
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridLastName">
+                  <Form.Group as={Col} md controlId="formGridLastName">
                     <Form.Label className="label">Last Name</Form.Label>
                     <Form.Control
                       className="Control"
@@ -114,7 +114,7 @@ function Appointment() {
                 </Row>
 
                 <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridPhone">
+                  <Form.Group as={Col} md controlId="formGridPhone">
                     <Form.Label className="label">Phone</Form.Label>
                     <Form.Control
                       className="Control"
@@ -127,7 +127,7 @@ function Appointment() {
                     />
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridEmail">
+                  <Form.Group as={Col} md controlId="formGridEmail">
                     <Form.Label className="label">E-mail</Form.Label>
                     <Form.Control
                       className="Control"
@@ -142,7 +142,7 @@ function Appointment() {
                 </Row>
 
                 <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridDate">
+                  <Form.Group as={Col} md controlId="formGridDate">
                     <Form.Label className="label">Date</Form.Label>
                     <Form.Control
                       className="Control"
@@ -155,7 +155,7 @@ function Appointment() {
                     />
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridTime">
+                  <Form.Group as={Col} md controlId="formGridTime">
                     <Form.Label className="label">Time</Form.Label>
                     <Form.Control
                       className="Control"
@@ -243,18 +243,12 @@ function Appointment() {
                   </p>
                 </Row>
               </Col>
-              <Col sm={12} md={4} className="app_card_map2">
-                <div
-                  style={{
-                    position: "relative",
-                    overflow: "hidden",
-                    width: "100%",
-                  }}
-                >
+              <Col sm={12} md={4}>
+                <div className="app_card_map2">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d477.5495139273673!2d81.67762659601236!3d16.75695704857599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37b70322cf445b%3A0x1fabbfe8a070c97c!2sSRI%20RAMALINGESWARA%20MEDICAL%20%26%20SURGICAL%20AGENCIES!5e0!3m2!1sen!2sin!4v1697885315344!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.398909398748!2d81.67487247515075!3d16.756817684026867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37b7ef9d5faf79%3A0xfbb872df9b28c5a!2sSri%20Chaitanya%20Orthopaedic%20%26%20Eye%20Hospital%20(Formerly%20Dr.%20Krishna%20Reddy%20Hospital)!5e0!3m2!1sen!2sin!4v1698836357529!5m2!1sen!2sin"
                     width="400"
-                    height="400"
+                    height="300"
                     style={{
                       borderRadius: "24px",
                       border: "1px solid var(--neutral-1000, #A1A4AC)",

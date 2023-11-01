@@ -174,7 +174,7 @@ function About() {
         </div>
         <div className="about4_cont">
           <Row>
-            <Col sm={12} md={7}>
+            <Col sm={12} md={6}>
               <h1 className="about_head1">Elements that Form Our Hospital</h1>
             </Col>
             <Col
