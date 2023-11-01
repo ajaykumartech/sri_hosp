@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import hosp from "../../Assets/Images/About/hospital.jpg";
 import krish1 from "../../Assets/Images/About/krishnareddy1.jpg";
@@ -22,6 +22,10 @@ import Header from "../Header/Header";
 import { Helmet } from "react-helmet";
 
 function About() {
+  useEffect(() => {
+    // This code will run when the component is mounted
+    window.scrollTo(0, 0); // Reset scroll position to the top
+  }, []);
   function ContextAwareToggle({ children, eventKey, callback }) {
     const { activeEventKey } = useContext(AccordionContext);
 

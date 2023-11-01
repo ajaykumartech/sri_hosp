@@ -7,7 +7,15 @@
     align-items: center;
     justify-content: center;
   }
-  
+  .load_heading {
+    color: var(--text-icon-light-heading, #252525);
+/* Headings/H4/Regular */
+font-family: Outfit;
+font-size: 58px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 58px */
+  }
   .screens {
     position: absolute;
     width: 100%;
@@ -105,3 +113,16 @@
       }
   }
   
+
+  @media (max-width: 767px) {
+
+    .load_heading {
+      color: var(--text-icon-light-heading, #252525);
+  /* Headings/H4/Regular */
+  font-family: Outfit;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 58px */
+    }
+  }

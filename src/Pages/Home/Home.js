@@ -17,7 +17,6 @@ import { Helmet } from "react-helmet";
 
 function Home() {
   const navigate =useNavigate();
-
   useEffect(() => {
     // This code will run when the component is mounted
     window.scrollTo(0, 0); // Reset scroll position to the top

@@ -2,10 +2,10 @@ body {
   max-width:100%;
   margin: 0;
   @font-face {
-    font-family: outfit;
+    font-family: Outfit,sans-serif;
     src: url("../src/Assets/Fonts/Outfit-Regular.ttf")  format('truetype');
   }
-  font-family: 'outfit', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Outfit', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

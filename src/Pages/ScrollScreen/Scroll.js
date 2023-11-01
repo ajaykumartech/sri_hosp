@@ -1,20 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import lady from "../../Assets/Images/ladypatient.jpg";
-import ladyorthodoc from "../../Assets/Images/ladyorthodoc.jpg";
-import ladynurse from "../../Assets/Images/ladynurse.jpg";
+import lady from "../../Assets/Images/final-pics/patient-care.JPG";
+import ladyorthodoc from "../../Assets/Images/final-pics/qual-sup.JPG";
+import ladynurse from "../../Assets/Images/final-pics/staff.JPG";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
 import "./Scroll.css";
 
+gsap.registerPlugin(ScrollTrigger);
 function Scroll() {
   const scrollContainer = useRef(null);
   
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     // Select all screen divs
-    const sections = scrollContainer.current.querySelectorAll(".screena");
+    const sections = gsap.utils.toArray(".screena");
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -35,12 +35,15 @@ function Scroll() {
     });
 
     return () => {
+      if (tl.current) {
+        tl.current.kill();
+        tl.current.clear();
+      }
+
       ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill();
       });
-
-      tl.kill();
-      tl.clear();
+     
     };
   }, []);
 

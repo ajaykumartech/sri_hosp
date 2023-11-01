@@ -3,10 +3,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Carousel, Col, Image, Row } from "react-bootstrap";
 import "./Facilities.css";
-import icu from "../../Assets/Images/icu.jpg";
-import waiting from "../../Assets/Images/waitinghall.jpg";
-import hospital from "../../Assets/Images/hospital.jpg";
-import emergency from "../../Assets/Images/emergency.jpg";
+import icu from "../../Assets/Images/final-pics/operation-theatre.JPG";
+import waiting from "../../Assets/Images/final-pics/waiting-hall.JPG";
+import pharmacy from "../../Assets/Images/final-pics/pharmacy.JPG";
+import orroom from "../../Assets/Images/final-pics/orroom.JPG";
+import ward from "../../Assets/Images/final-pics/inpatient-ward.JPG"
 
 // Initialize GSAP and ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -25,10 +26,11 @@ function Facilities() {
       >
         <Carousel.Item className="carousel_Cont">
           <Row>
-            <Col md={5}>
+            <Col sm={12} md={5}>
               <div>
                 <Image
                   rounded
+                  fluid
                   className="centered_img_f"
                   src={waiting}
                   alt="emergency"
@@ -70,7 +72,7 @@ function Facilities() {
                 <Image
                   rounded
                   className="centered_img_f"
-                  src={icu}
+                  src={orroom}
                   alt="emergency"
                 />
               </div>
@@ -109,7 +111,7 @@ function Facilities() {
                 <Image
                   rounded
                   className="centered_img_f"
-                  src={hospital}
+                  src={pharmacy}
                   alt="emergency"
                 />
               </div>
@@ -148,7 +150,7 @@ function Facilities() {
                 <Image
                   rounded
                   className="centered_img_f"
-                  src={emergency}
+                  src={ward}
                   alt="emergency"
                 />
               </div>

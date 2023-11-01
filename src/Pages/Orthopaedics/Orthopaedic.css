@@ -8,7 +8,7 @@
 ul{
   padding:0px;
   li{
-    width:auto;
+    width:auto !important;
   }
 }
 .ortho_heading {

@@ -1,105 +1,101 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logo from "../../Assets/Images/Logo.png";
-
-import { NavLink } from "react-router-dom";
 import "./Header.css";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
+import logo from "../../Assets/Images/Logo.png";
 
-function Header() {
-  const navigate = useNavigate();
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
-  // dropdown
-
+const Header = () => {
+  const [Mobile, setMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleDropdown = () => {
+  const toggleDropdown = (event) => {
+    event.stopPropagation();
     setIsOpen(!isOpen);
   };
+
+  const closeMobileMenu = () => {
+    setMobile(false);
+  };
+
+  const specialtiesDropdown = (
+    <ul className="specialties-dropdown" onClick={closeMobileMenu}>
+      <Link to="/orthopaedics" className="specialty-link">
+        <li className="dropdown-li">Orthopaedics</li>
+      </Link>
+      <Link to="/opthalmology" className="specialty-link">
+        <li className="dropdown-li">Ophthalmology</li>
+      </Link>
+      <Link to="neurology" className="specialty-link">
+        <li className="dropdown-li">Neuro Surgeon</li>
+      </Link>
+    </ul>
+  );
+
   return (
-    <div className="main">
-      <NavLink to="/Home" onClick={handleClick}>
+    <>
+      <div className="navbar">
         <img
           alt="logo1"
           src={logo}
-          className="logo-icon"
-          style={{ maxWidth: "164px", maxHeight: "121px" }}
+          onClick={() => navigate("/home")}
+          className="logo"
+          style={{ maxWidth: "160px", maxHeight: "121px", cursor: "pointer" }}
         />
-      </NavLink>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {Mobile && (
+            <ul
+              className={Mobile ? "nav-links-mobile" : "nav-links"}
+              onClick={closeMobileMenu}
+            >
+              <Link to="/about" className="about">
+                <li className="normal-li">About</li>
+              </Link>
+              <Link to="/insurance" className="insurance">
+                <li className="normal-li">Insurance</li>
+              </Link>
 
-      <div
-        className="main-div"
-        style={{
-          display: "flex",
-          flexDirection:"row",
-          alignItems: "center",
-        }}
-      >
-        <div className="nav-link-group">
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavLink to="/About" className="nav-link" onClick={handleClick}>
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/Insurance"
-                className="nav-link nav-insurance"
-                onClick={handleClick}
-              >
-                Insurances
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink onClick={toggleDropdown} className="nav-links">
-                Specialities
-                <MdOutlineArrowDropDown className="dropdown-icon" />
-              </NavLink>
-              {isOpen && (
-                <ul className="dropdown-ul">
-                  <li>
-                    <NavLink to="/Orthopaedics">Orthopaedics</NavLink>
+              <div className="specialties-dropdown-container">
+                <Link onClick={toggleDropdown} className="specialities">
+                  <li className="speciality normal-li">
+                    Specialities
+                    <MdOutlineArrowDropDown />
                   </li>
-                  <li>
-                    <NavLink to="/opthalmology">Ophthalmology</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/Neurology">Neuro Surgeon</NavLink>
-                  </li>
-                </ul>
+                </Link>
+                {isOpen && specialtiesDropdown}
+              </div>
+
+              <Link to="/book_an_appointment" className="home">
+                <li className="normal-li">Appointment</li>
+              </Link>
+            </ul>
+          )}
+          <div style={{ display: "flex", marginTop: "2vh" }}>
+            <button
+              className="mobile-menu-icon"
+              onClick={() => setMobile(!Mobile)}
+            >
+              {Mobile ? (
+                <TfiClose size={30} className="close-icon" />
+              ) : (
+                <RxHamburgerMenu size={30} className="ham-icon" />
               )}
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/book_an_appointment"
-                className="nav-link appointment"
-                onClick={handleClick}
-              >
-                Appointment
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-        <div className="nav-icon" onClick={handleClick}>
-          <i className="icons">{click ? <TfiClose /> : <RxHamburgerMenu />}</i>
-          <button
-            className="btn-app"
-            onClick={() => {
-              navigate("/book_an_appointment");
-            }}
-          >
-            Appointment
-          </button>
+            </button>
+            <button
+              variant="dark"
+              className="btn-app"
+              onClick={() => {
+                navigate('/book_an_appointment');
+              }}
+            >
+              Appointment
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-}
-
+};
 export default Header;

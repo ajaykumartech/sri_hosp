@@ -42,7 +42,7 @@ function Loading() {
       {currentScreen === 1 && (
         <div className={`screens screens${currentScreen}`}>
           <div style={{ display: "flex", flexDirection: "row", gap: "26px" }}>
-            <h2>Orthopaedics</h2>
+            <h2 className="load_heading">Orthopaedics</h2>
             <Image src={orto} alt="Orthopaedic_logo" />
           </div>
         </div>
@@ -50,7 +50,7 @@ function Loading() {
       {currentScreen === 2 && (
         <div className={`screens screens${currentScreen}`}>
           <div style={{ display: "flex", flexDirection: "row", gap: "26px" }}>
-            <h2>Ophthalmology</h2>
+            <h2 className="load_heading">Ophthalmology</h2>
             <Image src={opta} alt="Orthopaedic_logo" />
           </div>
         </div>
@@ -58,7 +58,7 @@ function Loading() {
       {currentScreen === 3 && (
         <div className={`screens screens${currentScreen}`}>
           <div style={{ display: "flex", flexDirection: "row", gap: "26px" }}>
-            <h2>Neurology</h2>
+            <h2 className="load_heading">Neurology</h2>
             <Image src={neuro} alt="Orthopaedic_logo" />
           </div>
         </div>
@@ -66,7 +66,7 @@ function Loading() {
       {currentScreen === 4 && (
         <div className={`screens screens${currentScreen}`}>
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <h2>and more...</h2>
+            <h2 className="load_heading">and more...</h2>
           </div>
         </div>
       )}

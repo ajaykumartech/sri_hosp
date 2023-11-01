@@ -60,19 +60,10 @@ border: 1px solid var(--grey-1000, #252525);
     color: var(--text-icon-light-heading, #252525);
     /* Headings/H2/Regular */
     font-family: Outfit;
-    font-size: 40px;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 100%; /* 120px */
-  }
-  .maintext_intro {
-    color: var(--text-icon-light-heading, #252525);
-    /* Headings/H3/Regular */
-    font-family: Outfit;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 93px */
   }
   .subtext_text {
     color: var(--greyscale-text-icon-body, #4f5154);
@@ -91,7 +82,7 @@ border: 1px solid var(--grey-1000, #252525);
     font-family: Outfit;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%; /* 36px */
     margin-top: 40px;
     margin-bottom: 25px;
@@ -101,23 +92,39 @@ border: 1px solid var(--grey-1000, #252525);
 /* Styles for screens with a minimum width of 768px and a maximum width of 991px (e.g., tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Your CSS rules for tablets go here */
-
+  .maintext_intro {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
 }
 
 /* Styles for screens with a minimum width of 992px and a maximum width of 1199px (e.g., small desktops) */
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Your CSS rules for small desktops go here */
- 
+  .maintext_intro {
+    color: var(--text-icon-light-heading, #252525);
+    /* Headings/H2/Regular */
+    font-family: Outfit;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 120px */
+  }
 }
 
 /* Styles for screens with a minimum width of 1200px and above (e.g., large desktops) */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1520px) {
   /* Your CSS rules for large desktops go here */
   .maintext_intro {
     color: var(--text-icon-light-heading, #252525);
     /* Headings/H2/Regular */
     font-family: Outfit;
-    font-size: 120px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 120px */

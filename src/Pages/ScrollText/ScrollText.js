@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import check1 from "../../Assets/Images/check1.jpg";
-import check2 from "../../Assets/Images/check2.jpg";
-import check3 from "../../Assets/Images/check3.jpg";
+import check2 from "../../Assets/Images/final-pics/scroll-text2.JPG";
+import check3 from "../../Assets/Images/final-pics/scroll-text1.JPG";
 
 import "./ScrollText.css";
 import gsap from "gsap";
@@ -11,7 +11,6 @@ import { Image } from "react-bootstrap";
 gsap.registerPlugin(ScrollTrigger);
 
 function ScrollText() {
-gsap.registerPlugin(ScrollTrigger)
   useEffect(() => {
     // Create a GSAP timeline for the letter-by-letter color change animation
     const tl = gsap.timeline({
@@ -50,39 +49,54 @@ gsap.registerPlugin(ScrollTrigger)
 
   
   }, []);
+  useEffect(() => {
+    // Select the text element
+    const text = document.querySelector(".text");
 
+    // Split the text into individual letters
+    const letters = text.innerText.split("");
+
+    // Create a timeline for the animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".text",
+        start: "top 60%", // Adjust as needed
+        end: "bottom 40%", // Adjust as needed
+        scrub: 1,
+      },
+    });
+
+    // Empty the text container
+    text.innerText = "";
+
+    // Rebuild the text with spans for each letter
+    letters.forEach((letter, index) => {
+      const span = document.createElement("span");
+      span.innerText = letter;
+      span.style.color = '#fff';; // Initial color
+      span.style.transition = "color 0.3s ease " + index * 0.1 + "s"; // Adjust the animation duration and delay
+
+      text.appendChild(span);
+
+      tl.to(span, {
+        color: "black", // Change to the desired color
+      });
+    });
+  }, []);
 
   return (
     <>
-      <div className="scroll_textCont">
-        <h1>
-          <span className="scrollText">C</span>
-          <span className="scrollText">A</span>
-          <span className="scrollText">R</span>
-          <span className="scrollText">E</span>
-          <span className="scrollText">.</span>
-          <span className="scrollText">{' '}</span>
-          <span className="scrollText">T</span>
-          <span className="scrollText">R</span>
-          <span className="scrollText">U</span>
-          <span className="scrollText">S</span>
-          <span className="scrollText">T</span>
-          <span className="scrollText">.</span>
-          <span className="scrollText">{' '}</span>
-          <span className="scrollText">H</span>
-          <span className="scrollText">E</span>
-          <span className="scrollText">A</span>
-          <span className="scrollText">L</span>
-          <span className="scrollText">T</span>
-          <span className="scrollText">H</span>
-          </h1>
-      </div>
-      <div>
+     <div className="scroll_textCont">
+      <section className="text">
+        CARE. TRUST. HEALTH</section>
+    </div>
+      <div style={{ position:"relative"}}>
   <div
     style={{
       display: "flex",
       flexDirection: "row",
-      justifyContent:"flex-start"
+      justifyContent:"flex-start",
+     
     }}
   >
     <div style={{ marginBottom: "0px" }}>

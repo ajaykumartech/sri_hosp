@@ -90,6 +90,8 @@ body {
 @media (max-width: 767px) {
   .screen {
     overscroll-behavior: none;
+    display: flex;
+    flex-direction: row;
     width: auto;
     height: auto;
   }
