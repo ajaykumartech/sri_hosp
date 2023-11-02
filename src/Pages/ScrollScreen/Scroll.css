@@ -88,17 +88,17 @@ body {
 
 
 @media (max-width: 767px) {
-  .screen {
+  .screena {
     overscroll-behavior: none;
     display: flex;
     flex-direction: row;
     width: auto;
-    height: auto;
+    height: 100%;
   }
   .screen1 {
     width: 100%;
-    height: auto;
-    flex-shrink: 1;
+    height: 100%;
+    flex-shrink: 0;
     background-color: #abad8b;
     padding: 66px;
   }

@@ -8,12 +8,15 @@ import Services from "../Services/Services";
 import Doctors from "../Doctors/Doctors";
 import Facilities from "../Facilities/Facilities";
 import Footer from "../Footer/Footer";
-import Scroll from "../ScrollScreen/Scroll";
+
 import ScrollText from "../ScrollText/ScrollText";
 import Testmonial from "../Testmonials/Testmonial";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import { Helmet } from "react-helmet";
+import { lazy } from "react";
+import { Suspense } from "react";
+const Scroll = lazy(() => import("../ScrollScreen/Scroll"));
 
 function Home() {
   const navigate =useNavigate();
@@ -70,7 +73,9 @@ function Home() {
       <Facilities />
       
     </div>
-    <Scroll />
+    <Suspense fallback={<div>Loading...</div>}>
+        <Scroll />
+      </Suspense>
     <Row>
     <ScrollText />
     </Row>

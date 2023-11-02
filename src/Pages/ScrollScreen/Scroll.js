@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect} from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import lady from "../../Assets/Images/final-pics/patient-care.JPG";
 import ladyorthodoc from "../../Assets/Images/final-pics/qual-sup.JPG";
@@ -9,17 +9,17 @@ import gsap from "gsap";
 import "./Scroll.css";
 
 gsap.registerPlugin(ScrollTrigger);
+
 function Scroll() {
-  const scrollContainer = useRef(null);
   
   useEffect(() => {
     // Select all screen divs
-    const sections = gsap.utils.toArray(".screena");
+    const sections = gsap.utils.toArray([".screen1",".screen2",".screen3"]);
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: scrollContainer.current,
-        start: "top top",
+        trigger: '.containers',
+        start: "top top+=1",
         pin: true,
         scrub: 1,
         snap: 1 / (sections.length - 1),
@@ -49,7 +49,7 @@ function Scroll() {
 
 
   return (
-    <div className="containers" ref={scrollContainer}>
+    <div className="containers">
       {/* screen1 */}
       <section className="screena screen1">
         <Row className="image_card_scroll">
