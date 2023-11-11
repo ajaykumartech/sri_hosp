@@ -19,73 +19,92 @@ import { Suspense } from "react";
 const Scroll = lazy(() => import("../ScrollScreen/Scroll"));
 
 function Home() {
-  const navigate =useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     // This code will run when the component is mounted
     window.scrollTo(0, 0); // Reset scroll position to the top
   }, []);
   return (
     <>
-     <Helmet>
-        <title>
-         Home
-        </title>
-        <link rel="canonical" href="https://Visheshcountrycache.tech/home" />
-        <meta name='description' content="Get the best Orthopeadician for your health with Sri chaitanya hospitals." />
-         <meta name="keywords" content="visheshcountrycache,ortho hospital, Eye check, chaitanya hospital,best Eye hospital in tanuku,About,Contact"/>
+      <Helmet>
+        <title>Home</title>
+        <link rel="canonical" href="https://visheshcountrycache.tech/home" />
+        <meta
+          name="description"
+          content="Get the best Orthopeadician for your health with Sri chaitanya hospitals."
+        />
+        <meta
+          name="keywords"
+          content="visheshcountrycache,ortho hospital, Eye check, chaitanya hospital,best Eye hospital in tanuku,About,Contact"
+        />
         <meta name="robots" content="index, follow" />
-         <html lang="en" />
+        <html lang="en" />
       </Helmet>
-    <div className="main_container">
-      <Row>
-        <Header />
-  
-      </Row>
-      <Container fluid>
+      <div className="main_container">
         <Row>
-          <Col md={8}>
-            <div className="hero_cont_m">
-              <h1 className="main_heading">
-                Compassionate Care, Exceptional Results
-              </h1>
-              <p className="main_text">
-                Empowering You with Resilient Bones and Vision Clarity Beyond
-                Limits
-              </p>
-              <Button variant="dark" onClick={()=>{navigate('/book_an_appointment')}} className="main_Btn">Book an Appointment</Button>
-            </div>
-          </Col>
-          <Col md={4}>
-            <Image className="heros" src={dnalogo} alt="dna" cover="true" />
-          </Col>
+          <Header />
         </Row>
-        <Row>
-          <Contact />
-        </Row>
-         <Row>
-          <Intro />
-         </Row>
-         <Row>
-          <Services />
-         </Row>
-         <Doctors />
-      </Container>
-      <Facilities />
-      
-    </div>
-    <Suspense fallback={<div>Loading...</div>}>
-        <Scroll />
-      </Suspense>
-    <Row>
-    <ScrollText />
-    </Row>
-   
-    
-    <div className="main_container">
-    <Testmonial />
-    </div>
-    
-    <Footer />
+        <Container fluid>
+          <Row>
+            <Col md={8}>
+              <div className="hero_cont_m">
+                <h1 className="main_heading">
+                  Compassionate Care, Exceptional Results
+                </h1>
+                <p className="main_text">
+                  Empowering You with Resilient Bones and Vision Clarity Beyond
+                  Limits
+                </p>
+                <Button
+                  variant="dark"
+                  onClick={() => {
+                    navigate("/book_an_appointment");
+                  }}
+                  className="main_Btn"
+                >
+                  Book an Appointment
+                </Button>
+              </div>
+            </Col>
+            <Col md={4}>
+              <Image
+                className="heros"
+                src={dnalogo}
+                alt="dr.varun tanuku"
+                cover="true"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Contact />
+          </Row>
+          <Row>
+            <Intro />
+          </Row>
+          <Row>
+            <Services />
+          </Row>
+          <Doctors />
+        </Container>
+        <Facilities />
+      </div>
+
+      <div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Scroll />
+        </Suspense>
+      </div>
+      <div>
+     
+        <ScrollText />
+       
+      </div>
+
+      <div className="main_container">
+        <Testmonial />
+      </div>
+
+      <Footer />
     </>
   );
 }

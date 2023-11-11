@@ -38,7 +38,7 @@ const Header = () => {
     <>
       <div className="navbar">
         <img
-          alt="logo1"
+          alt="sri chaitanya hospitals"
           src={logo}
           onClick={() => navigate("/home")}
           className="logo"

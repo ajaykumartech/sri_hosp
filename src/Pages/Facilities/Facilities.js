@@ -1,16 +1,12 @@
 import React from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Carousel, Col, Image, Row } from "react-bootstrap";
-import "./Facilities.css";
+
 import icu from "../../Assets/Images/final-pics/operation-theatre.JPG";
 import waiting from "../../Assets/Images/final-pics/waiting-hall.JPG";
 import pharmacy from "../../Assets/Images/final-pics/pharmacy.JPG";
 import orroom from "../../Assets/Images/final-pics/orroom.JPG";
-import ward from "../../Assets/Images/final-pics/inpatient-ward.JPG"
-
-// Initialize GSAP and ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+import ward from "../../Assets/Images/final-pics/inpatient-ward.JPG";
+import "./Facilities.css";
 
 function Facilities() {
   return (
@@ -31,9 +27,9 @@ function Facilities() {
                 <Image
                   rounded
                   fluid
-                  className="centered_img_f"
+                  className="img-fluid"
                   src={waiting}
-                  alt="emergency"
+                  alt="waiting hall at chaitanya hospitals"
                 />
               </div>
             </Col>
@@ -70,10 +66,11 @@ function Facilities() {
             <Col md={5} sm={12}>
               <div>
                 <Image
+                  fluid
                   rounded
-                  className="centered_img_f"
+                  className="img-fluid"
                   src={orroom}
-                  alt="emergency"
+                  alt="Operation theater at chaitanya hospitals"
                 />
               </div>
             </Col>
@@ -110,9 +107,10 @@ function Facilities() {
               <div>
                 <Image
                   rounded
-                  className="centered_img_f"
+                  fluid
+                  className="img-fluid"
                   src={pharmacy}
-                  alt="emergency"
+                  alt="pharmacy at chaitanya hospitals"
                 />
               </div>
             </Col>
@@ -149,9 +147,10 @@ function Facilities() {
               <div>
                 <Image
                   rounded
-                  className="centered_img_f"
+                  fluid
+                  className="img-fluid"
                   src={ward}
-                  alt="emergency"
+                  alt="Ward rooms at chaitanya hospitals"
                 />
               </div>
             </Col>
@@ -189,9 +188,10 @@ function Facilities() {
               <div>
                 <Image
                   rounded
-                  className="centered_img_f"
+                  fluid
+                  className="img-fluid"
                   src={icu}
-                  alt="emergency"
+                  alt="ICU at chaitanya hospitals"
                 />
               </div>
             </Col>

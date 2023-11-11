@@ -15,7 +15,7 @@ function Doctors() {
         <Col md={6}>
             <Card className='card1'>
               <div className='img_doccont'>
-            <Image className="centered_imags" src={varun} alt='varun'/>
+            <Image className="centered_imags" src={varun} alt='Doctor Varun'/>
             </div>
             </Card>
            
@@ -30,7 +30,7 @@ function Doctors() {
         <Col md={6}>
             <Card className='card1'>
             <div className='img_doccont'>
-            <Image className="centered_imags" src={alekhya} alt='varun'/>
+            <Image className="centered_imags" src={alekhya} alt='Doctor Alekhya'/>
             </div>
             </Card>
            

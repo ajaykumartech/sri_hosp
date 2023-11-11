@@ -1,52 +1,49 @@
-import React, { useEffect} from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Col, Image, Row } from "react-bootstrap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 import lady from "../../Assets/Images/final-pics/patient-care.JPG";
 import ladyorthodoc from "../../Assets/Images/final-pics/qual-sup.JPG";
 import ladynurse from "../../Assets/Images/final-pics/staff.JPG";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
 
 import "./Scroll.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Scroll() {
-  
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Select all screen divs
-    const sections = gsap.utils.toArray([".screen1",".screen2",".screen3"]);
+    const sections = gsap.utils.toArray([".screen1", ".screen2", ".screen3"]);
 
-    const tl = gsap.timeline({
+    const animation = gsap.timeline({
       scrollTrigger: {
-        trigger: '.containers',
+        trigger: ".containers",
         start: "top top+=1",
         pin: true,
         scrub: 1,
         snap: 1 / (sections.length - 1),
         end: () => `+=${sections.length * 100}%`, // Adjust this value as needed
-      },
+      }
     });
-
     sections.forEach((section, index) => {
-      tl.to(section, {
+      animation.to(section, {
         xPercent: -100 * index,
         ease: "none",
       });
     });
 
+   
     return () => {
-      if (tl.current) {
-        tl.current.kill();
-        tl.current.clear();
+      if (animation.current) {
+        animation.current.kill();
+        animation.current.clear();
       }
-
+    
       ScrollTrigger.getAll().forEach((trigger) => {
         trigger.kill();
       });
-     
     };
   }, []);
-
 
   return (
     <div className="containers">
@@ -107,7 +104,7 @@ function Scroll() {
               <h1 className="scroll_head">24/7 Nurse Staff</h1>
               <p className="scroll_sub">
                 Our dedicated nursing team is always here, around the clock, to
-                provide continuous care and suppor
+                provide continuous care and support.
               </p>
             </div>
           </Col>

@@ -11,8 +11,6 @@ import Appointment from './Pages/Appointment/Appointment';
 import Loading from './Pages/Loading/Loading';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
 import { Helmet } from 'react-helmet';
-import { I18nextProvider } from 'react-i18next'; // Import I18nextProvider
-import i18n from './i18n/i18'; 
 
 
 function App() {
@@ -27,8 +25,7 @@ function App() {
          <meta name="keywords" content="visheshcountrycache,ortho hospital, knee fracture, chaitanya hospital,best Ortho hospital in tanuku,bones,krishnareddy hospital"/>
         <meta name="robots" content="index, follow" />
          <html lang="en" />
-      </Helmet>
-      <I18nextProvider i18n={i18n}> 
+      </Helmet> 
     <BrowserRouter>
        <Routes>
         <Route exact="true" path="/" Component={Loading} />
@@ -42,7 +39,6 @@ function App() {
         <Route path="*" Component={PageNotFound} />
        </Routes>
     </BrowserRouter>
-    </I18nextProvider>
     </>
   );
 }

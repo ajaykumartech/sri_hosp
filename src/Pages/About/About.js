@@ -22,10 +22,12 @@ import Header from "../Header/Header";
 import { Helmet } from "react-helmet";
 
 function About() {
+
   useEffect(() => {
     // This code will run when the component is mounted
     window.scrollTo(0, 0); // Reset scroll position to the top
   }, []);
+  
   function ContextAwareToggle({ children, eventKey, callback }) {
     const { activeEventKey } = useContext(AccordionContext);
 
@@ -63,7 +65,7 @@ function About() {
     <>
       <Helmet>
         <title>About Us</title>
-        <link rel="canonical" href="https://Visheshcountrycache.tech/about" />
+        <link rel="canonical" href="https://visheshcountrycache.tech/about" />
         <meta
           name="description"
           content="Get the best Orthopeadician for your health with Sri chaitanya hospitals."
@@ -108,7 +110,7 @@ function About() {
                   <Image
                   fluid
                     src={krish2}
-                    alt="Image 1"
+                    alt="doctor Krishnareddy"
                     style={{ zIndex: 2 }} // Adjust the zIndex to control the image stacking
                   />
                 </Col>
@@ -116,7 +118,7 @@ function About() {
                   <Image
                     src={krish1}
                     fluid
-                    alt="Image 2"
+                    alt="doctor Krishnareddy"
                     style={{ zIndex: 1, width: "500px" }} // Adjust the zIndex to control the image stacking
                   />
                 </Col>
@@ -185,7 +187,7 @@ function About() {
               <Row>
                 <Col md={2}>
                   {" "}
-                  <Image className="img-fluid" src={qual} alt="hospital" />
+                  <Image className="img-fluid" src={qual} alt="chaitanya hospital" />
                 </Col>
                 <Col md={10}>
                   {" "}
@@ -201,7 +203,7 @@ function About() {
               <Row>
                 <Col md={2}>
                   {" "}
-                  <Image className="img-fluid" src={qual} alt="hospital" />
+                  <Image className="img-fluid" src={qual} alt="chaitanya hospital" />
                 </Col>
                 <Col md={10}>
                   {" "}
@@ -216,7 +218,7 @@ function About() {
               <Row>
                 <Col md={2}>
                   {" "}
-                  <Image className="img-fluid" src={qual} alt="hospital" />
+                  <Image className="img-fluid" src={qual} alt="chaitanya hospital" />
                 </Col>
                 <Col md={10}>
                   {" "}

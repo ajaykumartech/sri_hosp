@@ -15,8 +15,9 @@
   /* Bg_Blur */
   padding: 30px;
   backdrop-filter: blur(3.5px);
-  width:90%;
-  margin-left: 15px;;
+  width:80%;
+  margin-left: 5px;
+
 }
 
 .sliding_container {
@@ -44,7 +45,7 @@
   display: block;
   margin: 0 auto; /* Horizontally center the image */
   text-align: center;
-  max-height: 400px;
+  max-height: 450px;
   padding: 5px;
   max-width: 500px;
   object-fit:contain;
@@ -75,7 +76,7 @@ line-height: 100%; /* 36px */
 /* Default styles for all screen sizes */
 
 /* Styles for screens with a maximum width of 767px (e.g., mobile phones) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* Your CSS rules for mobile devices go here */
   .facilitiy_maintext {
     color: var(--base-balck, #000);
@@ -129,13 +130,14 @@ line-height: 100%; /* 36px */
     /* Bg_Blur */
     padding: 15px;
     backdrop-filter: blur(3.5px);
-    width:80%;
+    width:90%;
+    max-height: 700px;
   }
   .centered_img_f {
     display: block;
     margin: 0 auto; /* Horizontally center the image */
     text-align: center;
-    height: 250px;
+    height: 290px;
     padding: 5px;
     max-width: 250px;
     object-fit:cover;
@@ -269,7 +271,7 @@ line-height: 100%; /* 36px */
     /* Bg_Blur */
     padding: 15px;
     backdrop-filter: blur(3.5px);
-    width:80%;
+    width:90%;
   }
   .centered_img_f {
     display: block;
@@ -277,7 +279,8 @@ line-height: 100%; /* 36px */
     text-align: center;
     height: 250px;
     padding: 5px;
-    max-width: 350px;
+    max-width: 450px;
+    max-height: 450px;
     object-fit:cover;
     padding:5px;
   }
@@ -346,7 +349,7 @@ line-height: 100%; /* 36px */
     text-align: center;
     max-height: 400px;
     padding: 5px;
-    max-width: 400px;
+    max-width: 450px;
     object-fit:contain;
     padding:5px;
   }

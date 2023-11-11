@@ -215,7 +215,7 @@ function Appointment() {
               <Image
                 className="img-fluid"
                 src={check}
-                alt="contact"
+                alt="varun ortho"
                 style={{ borderRadius: "32px", maxHeight: "973px" }}
               />
             </Col>

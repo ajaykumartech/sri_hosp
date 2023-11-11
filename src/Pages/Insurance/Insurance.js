@@ -83,7 +83,7 @@ function Insurance() {
         <title>
           Insurance
         </title>
-        <link rel="canonical" href="https://Visheshcountrycache.tech/Insurance" />
+        <link rel="canonical" href="https://visheshcountrycache.tech/Insurance" />
         <meta name='description' content="Get the best Orthopeadician for your health with Sri chaitanya hospitals." />
          <meta name="keywords" content="visheshcountrycache,ortho hospital, bone fracture, chaitanya hospital,best Insurance provided by hospital in tanuku"/>
         <meta name="robots" content="index, follow" />

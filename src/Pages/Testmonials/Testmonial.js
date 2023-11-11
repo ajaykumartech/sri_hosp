@@ -12,7 +12,7 @@ function Testmonial() {
         <h1 className="testimonial_heading">Patient Experiences</h1>
       </div>
       <div>
-        <Carousel interval={2000}>
+        <Carousel  data-bs-theme="dark"   controls={false} interval={2000}>
           <Carousel.Item>
             <Row className="carousel_Cont">
               <Col md={4}>
