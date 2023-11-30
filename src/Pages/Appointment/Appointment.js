@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import check from "../../Assets/Images/contact/contact1.jpg";
-import hall from "../../Assets/Images/contact/contact2.jpg";
+
+import hall from "../../Assets/Images/final-pics/contact2.png";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import "./Appointment.css";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import { Helmet } from "react-helmet";
+import AppointmentImages from "../Appointment-images/AppointmentImages";
 
 function Appointment() {
   const [formData, setFormData] = useState({
@@ -49,6 +50,7 @@ function Appointment() {
       specialty: "",
       message: "",
     });
+    
   };
 
   return (
@@ -82,8 +84,8 @@ function Appointment() {
         </div>
 
         <Container fluid>
-          <Row style={{ padding: "12px" }}>
-            <Col sm={12} md={6} style={{ marginRight: "50px" }}>
+          <Row style={{ padding: "12px"}}>
+            <Col sm={12} md={6}>
               <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
                   <Form.Group as={Col} md controlId="formGridFirstName">
@@ -179,7 +181,7 @@ function Appointment() {
                     >
                       <option value="orthopaedics">orthopaedics</option>
                       <option value="opthalmology">opthalmology</option>
-                      <option value="neurology">neurology</option>
+                      <option value="neurology">spine</option>
                     </Form.Select>
                   </Form.Group>
                 </Row>
@@ -210,14 +212,15 @@ function Appointment() {
                 margin: "0px",
               }}
               sm={12}
-              md={5}
+              md={6}
             >
-              <Image
+              {/* <Image
                 className="img-fluid"
                 src={check}
                 alt="varun ortho"
                 style={{ borderRadius: "32px", maxHeight: "973px" }}
-              />
+              /> */}
+              <AppointmentImages/>
             </Col>
           </Row>
           <div className="app_card">

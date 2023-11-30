@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Home - Sri Chaitanya Hospital</title>
         <link rel="canonical" href="https://visheshcountrycache.tech/home" />
         <meta
           name="description"

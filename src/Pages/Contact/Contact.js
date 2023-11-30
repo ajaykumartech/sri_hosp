@@ -20,7 +20,7 @@ function Contact() {
               <h2 className="contact_h2">Visit Us</h2>
               <div className="contact_content">
                 <span>Opp: S.M.V.M Polytechnic College,</span>
-                <span>Vinnukota Street, Sajjapuram</span>
+                <span>Vinnakota Vari Street, Sajjapuram</span>
                 <span>Tanuku, Andhra Pradesh</span>
               </div>
               <p className="contact_link">View on google map</p>
@@ -37,11 +37,11 @@ function Contact() {
             <Row className="contact_group">
               <h2 className="contact_h2">Contact Us</h2>
               <div className="contact_content">
-                <section className="contact_content">08819-234455</section>
-                <p className="contact_content">08819-22456</p>
+                <section className="contact_content">08819 - 229585</section>
+                <p className="contact_content">08819 - 229586</p>
               </div>
               <label className="contact_label">E-mail:</label>
-              <p className="contact_links">srichaitanyahospital@gmail.com</p>
+              <p className="contact_links">chaitanyaortho1989@gmail.com</p>
             </Row>
           </Card>
         </Col>
@@ -57,7 +57,7 @@ function Contact() {
               <div className="contact_content">
                 <section className="contact_content">Monday-Saturday</section>
                 <section className="contact_content">9:00 AM - 2:00 PM</section>
-                <p className="contact_content">5:00 PM - 7:00 PM</p>
+                <p className="contact_content">5:00 PM - 8:00 PM</p>
               </div>
               <p className="contact_links">24/7 Emergency Services</p>
             </Row>

@@ -7,11 +7,11 @@ import paceoem from "../../Assets/Images/Optha/phacoemulsification.jpg";
 import lasik from "../../Assets/Images/Optha/lasik.jpg";
 import icl from "../../Assets/Images/Optha/icls.jpg";
 import pytergium from "../../Assets/Images/Optha/pytegrium.jpg";
-import retinalinj from "../../Assets/Images/Optha/retinal_inj.png";
+import retinalinj from "../../Assets/Images/Optha/retinal_t.jpeg";
 import botox from "../../Assets/Images/Optha/botox.jpg";
 import clc from "../../Assets/Images/Optha/contact_lens.jpg";
 import ortho from "../../Assets/Images/Ortho/shoulder.jpg";
-import neuro from "../../Assets/Images/neurology.png";
+import spine from "../../Assets/Images/Ortho/spine.jpg";
 import { Button, Col, Image, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./Opthalmology.css";
@@ -32,6 +32,13 @@ function Opthalmology() {
     setLoading(true); // Show loading component
     setTimeout(() => {
       navigate("/orthopaedics"); // Simulate navigation delay
+      setLoading(false); // Hide loading component after navigation
+    }, 2000); // Adjust the delay as needed
+  };
+  const navigateToSpine = () => {
+    setLoading(true); // Show loading component
+    setTimeout(() => {
+      navigate("/spine"); // Simulate navigation delay
       setLoading(false); // Hide loading component after navigation
     }, 2000); // Adjust the delay as needed
   };
@@ -662,14 +669,12 @@ function Opthalmology() {
                     <div>
                       <h1 className="sect_heading">Orthopaedics</h1>
                       <section className="orthosec2">
-                        Your vision is our priority, and we are dedicated to
-                        providing you with world-class eye care services. Our
-                        team of highly skilled ophthalmologist and staff is
-                        committed to preserving and enhancing your eye health.
-                        Whether you require routine eye examinations, treatment
-                        for eye conditions, or surgical interventions, we are
-                        here to deliver exceptional care tailored to your
-                        individual needs.
+                        We prioritize your musculoskeletal health, offering
+                        exceptional orthopaedic care. Our skilled team is
+                        dedicated to preserving and enhancing your bone and
+                        joint well-being, providing tailored services, from
+                        routine assessments to advanced interventions and
+                        surgeries
                       </section>
                     </div>
                     <div>
@@ -693,7 +698,7 @@ function Opthalmology() {
                   >
                     <div style={{ height: "520px", overflow: "hidden" }}>
                       <Image
-                        src={neuro}
+                        src={spine}
                         alt="joint"
                         className="centered_img"
                         rounded
@@ -701,22 +706,19 @@ function Opthalmology() {
                     </div>
 
                     <div>
-                      <h1 className="sect_heading">Neurology</h1>
+                      <h1 className="sect_heading">Spine</h1>
                       <section className="orthosec2">
-                        Your neurological well-being is our priority, and our
-                        expert team is committed to providing you with
-                        comprehensive and compassionate care. Whether you seek
-                        evaluations, treatments, or specialized interventions
-                        for neurological conditions, we are here to deliver
-                        exceptional care tailored to your unique needs. Explore
-                        our comprehensive ophthalmology services and discover
-                        how we can help you.
+                        Your spine health is our utmost priority. Our
+                        experienced team is committed to providing personalized
+                        care, whether you need routine spinal examinations,
+                        treatment for spine-related conditions, or surgical
+                        interventions for fixations. Trust us for best spine
+                        care tailored to your individual needs and focused on
+                        enhancing your overall well-being
                       </section>
                       <div>
                         <Button
-                          onClick={() => {
-                            navigate("/neurology");
-                          }}
+                          onClick={navigateToSpine}
                           className="service_button1"
                           variant="outline-dark"
                         >

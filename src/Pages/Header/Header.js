@@ -28,8 +28,8 @@ const Header = () => {
       <Link to="/opthalmology" className="specialty-link">
         <li className="dropdown-li">Ophthalmology</li>
       </Link>
-      <Link to="neurology" className="specialty-link">
-        <li className="dropdown-li">Neuro Surgeon</li>
+      <Link to="/spine" className="specialty-link">
+        <li className="dropdown-li">Spine</li>
       </Link>
     </ul>
   );

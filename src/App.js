@@ -11,6 +11,7 @@ import Appointment from './Pages/Appointment/Appointment';
 import Loading from './Pages/Loading/Loading';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
 import { Helmet } from 'react-helmet';
+import Spine from './Pages/Spine/Spine';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Specialities" Component={Specialities} />
         <Route path="/orthopaedics" Component={Orthopaedic} />
         <Route path="/opthalmology" Component={Opthalmology} />
+        <Route path="/spine" Component={Spine} />
         <Route path="/insurance" Component={Insurance} />
         <Route path="/book_an_appointment" Component={Appointment} />
         <Route path="*" Component={PageNotFound} />

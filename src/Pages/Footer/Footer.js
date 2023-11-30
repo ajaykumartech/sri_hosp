@@ -105,7 +105,7 @@ function Footer() {
               </div>
               <div>
                 {" "}
-                <p id="p">srichaitanyahospital@gmail.com</p>
+                <p id="p3">srichaitanyahospital@gmail.com</p>
               </div>
             </div>
 

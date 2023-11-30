@@ -59,6 +59,7 @@
   line-height: 150%; /* 36px */
   letter-spacing: 0.48px;
   margin-top:16px;
+  cursor: pointer;
 }
 .contact_links {
   color: var(--greyscale-text-icon-body, #4F5154);
@@ -281,6 +282,7 @@ max-width: 375px;
     line-height: 150%; /* 36px */
     letter-spacing: 0.48px;
     max-width: 375px;
+    cursor: pointer;
   }
   .contact_label{
     color: var(--greyscale-text-icon-body, #4F5154);
@@ -449,6 +451,7 @@ max-width: 375px;
     line-height: 150%; /* 36px */
     letter-spacing: 0.48px;
     max-width: 375px;
+    cursor: pointer;
   }
   .contact_label{
     color: var(--greyscale-text-icon-body, #4F5154);
@@ -465,6 +468,6 @@ max-width: 375px;
     display: flex;
     flex-direction: row;
     gap: 0px;
-    margin-top: 356px;
+    margin-top: 456px;
   }
 }

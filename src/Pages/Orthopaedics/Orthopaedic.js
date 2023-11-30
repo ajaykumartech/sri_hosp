@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Col, Image, Row } from "react-bootstrap";
 import hip from "../../Assets/Images/hipjoint.png";
 import arr from "../../Assets/Images/arrow_dir.png";
-import orthoscope from "../../Assets/Images/Ortho/orthoscope.jpg";
 import jointpreserve from "../../Assets/Images/Ortho/jointpreserve.jpg";
 import trauma from "../../Assets/Images/Ortho/trauma.jpg";
 import spine from "../../Assets/Images/Ortho/spine.jpg";
@@ -10,10 +9,8 @@ import deformity from "../../Assets/Images/Ortho/deformity.jpg";
 import illizarov from "../../Assets/Images/Ortho/illizarov.jpg";
 import sports from "../../Assets/Images/Ortho/sports.jpg";
 import nonunion from "../../Assets/Images/Ortho/nonunion.jpg";
-import shoulder from "../../Assets/Images/Ortho/shoulder.jpg";
 import jointrepl from "../../Assets/Images/Ortho/ortho_jointreplacement.jpg";
 import opthalmology from "../../Assets/Images/opthalmology.jpg";
-import neurology from "../../Assets/Images/neurology.png";
 import "./Orthopaedic.css";
 import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router-dom";
@@ -35,6 +32,13 @@ function Orthopaedic() {
     setLoading(true); // Show loading component
     setTimeout(() => {
       navigate("/opthalmology"); // Simulate navigation delay
+      setLoading(false); // Hide loading component after navigation
+    }, 2000); // Adjust the delay as needed
+  };
+  const navigateToSpine = () => {
+    setLoading(true); // Show loading component
+    setTimeout(() => {
+      navigate("/spine"); // Simulate navigation delay
       setLoading(false); // Hide loading component after navigation
     }, 2000); // Adjust the delay as needed
   };
@@ -73,7 +77,7 @@ function Orthopaedic() {
                   <h1 className="ortho_heading">Orthopaedics</h1>
                   <section className="orthosec1">
                     We pride ourselves on providing extensive inpatient and
-                    outpatient orthopedic services. Our orthopedic surgeon and
+                    outpatient orthopaedic services. Our orthopaedic surgeon and
                     staff are dedicated to helping you both understand your
                     procedure and get back to your life.
                   </section>
@@ -86,7 +90,7 @@ function Orthopaedic() {
                     conditions differ from acute musculoskeletal injuries, such
                     as a shoulder dislocation or a broken bone, which are often
                     the result of sudden trauma. In contrast to accidental or
-                    traumatic orthopedic injuries, chronic conditions tend to
+                    traumatic orthopaedic injuries, chronic conditions tend to
                     progress gradually, worsening or evolving over time. They
                     may be attributed to genetic factors, aging, or overuse.
                   </section>
@@ -127,15 +131,7 @@ function Orthopaedic() {
                     </span>
                   </Button>
                 </a>
-                <a href="#Spine_Services">
-                  {" "}
-                  <Button variant="light" className="service_buttonOrth">
-                    Spine Services{" "}
-                    <span style={{ float: "right" }}>
-                      <Image src={arr} className="arr_ortho_icon" />
-                    </span>
-                  </Button>
-                </a>
+
                 <a href="#Deformity_Correction_Surgeries">
                   <Button variant="light" className="service_buttonOrth">
                     Deformity Correction Surgeries{" "}
@@ -164,13 +160,13 @@ function Orthopaedic() {
                 </a>
                 <a href="#Sports_Medicine&Keyhole_Services">
                   <Button variant="light" className="service_buttonOrth">
-                    Sport Medicine & Keyhole Services{" "}
+                    Sport Medicine & Arthroscope
                     <span style={{ float: "right" }}>
                       <Image src={arr} className="arr_ortho_icon" />
                     </span>
                   </Button>
                 </a>
-                <a href="#Shoulder_Surgery">
+                {/* <a href="#Shoulder_Surgery">
                   {" "}
                   <Button variant="light" className="service_buttonOrth">
                     Shoulder{" "}
@@ -186,7 +182,7 @@ function Orthopaedic() {
                       <Image src={arr} className="arr_ortho_icon" />
                     </span>
                   </Button>
-                </a>
+                </a> */}
               </Col>
             </Row>
             <Row style={{ margin: "116px 0 201px 0", width: "90%" }}>
@@ -194,9 +190,9 @@ function Orthopaedic() {
                 <section className="orthosec2">
                   At Sri Chaitanya Ortho & Eye Hospital, we are committed to
                   helping you achieve a pain-free, active, and fulfilling life.
-                  Contact us today to learn more about our orthopedic services
+                  Contact us today to learn more about our orthopaedic services
                   and to schedule a consultation with our experts. Your journey
-                  to orthopedic excellence begins here.
+                  to orthopaedic excellence begins here.
                 </section>
               </Col>
               <Col md={3}>
@@ -228,18 +224,11 @@ function Orthopaedic() {
                       <section className="orthosec2">
                         We offer comprehensive joint replacement services. Our
                         facility specializes in surgical interventions for knee,
-                        hip, and shoulder joint replacements. We also provide
-                        dedicated sports injury physiotherapy services in
-                        Tanuku, ensuring a holistic approach to orthopedic care.
-                      </section>
-                    </div>
-
-                    <div>
-                      <section className="orthosec2">
-                        Furthermore, we prioritize preoperative and
-                        postoperative care for patients undergoing joint
-                        replacement surgeries, ensuring their comfort and
-                        well-being throughout their treatment journey.
+                        hip, and shoulder joint replacements. We prioritize
+                        preoperative and postoperative care for patients
+                        undergoing joint replacement surgeries, ensuring their
+                        comfort and well-being throughout their treatment
+                        journey.
                       </section>
                     </div>
 
@@ -271,7 +260,7 @@ function Orthopaedic() {
                   <div style={{ gap: "40px" }}>
                     <ul>
                       <li>
-                        <p>Primary Total Knee Replacement</p>
+                        <p>Primary Total Knee, Hip, and Shoulder Replacement</p>
                       </li>
                       <li>
                         <p>Computer Aided Hip & Knee Navigation Surgeries</p>
@@ -281,7 +270,7 @@ function Orthopaedic() {
                       </li>
 
                       <li>
-                        <p>Osteotomies (Re-alignment of bone)</p>
+                        <p>Primary Total Hip Replacements</p>
                       </li>
                     </ul>
                   </div>
@@ -290,17 +279,13 @@ function Orthopaedic() {
                   <div style={{ gap: "40px" }}>
                     <ul>
                       <li>
-                        <p>Oxinium Knees</p>
+                        <p>Revision Joint Replacements</p>
                       </li>
-                      <li>
-                        <p>Primary Total Hip Replacements</p>
-                      </li>
-                      <li>
-                        <p>Revision Knee Replacements</p>
-                      </li>
-
                       <li>
                         <p>Revision Hip Replacements</p>
+                      </li>
+                      <li>
+                        <p>Reverse Shoulder</p>
                       </li>
                     </ul>
                   </div>
@@ -368,13 +353,12 @@ function Orthopaedic() {
 
                     <div>
                       <section className="orthosec2">
-                        One such procedure is High Tibial Osteotomy (HTO), which
-                        not only provides effective pain relief but also slows
+                        Our procedures include High Tibial Osteotomy (HTO),
+                        Osteochondral Autologous Transfer Surgery (OATS), Bone
+                        Marrow Aspirate Concentrate (BMAS), and Micro Fracturing
+                        which not only provides effective pain relief also slows
                         down the degeneration process, enabling a healthy and
-                        active lifestyle. Following an HTO, depending on the
-                        initial joint damage, the need for knee replacement
-                        surgery can be deferred by up to 15 years or may even
-                        become unnecessary altogether.
+                        active lifestyle.
                       </section>
                     </div>
                   </div>
@@ -541,128 +525,7 @@ function Orthopaedic() {
               </Row>
             </div>
           </div>
-          <hr />
-          <div className="Orthomain_container">
-            <div id="Spine_Services" className="sections_div">
-              <h1 className="orthosect_heading">Spine Services</h1>
-              <Row style={{ marginBottom: "52px" }}>
-                <Col xs={12} md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "24px",
-                    }}
-                  >
-                    <div>
-                      <section className="orthosec2">
-                        Back pain ranks among the most common health issues
-                        affecting a significant number of individuals. Prolonged
-                        periods of sitting, a lack of physical activity, and
-                        unhealthy work habits are some of the leading factors
-                        contributing to back pain. Typically, back pain can be
-                        managed with simple medications or exercises. However,
-                        when these approaches prove ineffective, and the quality
-                        of life is significantly impacted, we may recommend
-                        spine surgery to address severe and persistent back pain
-                        conditions. Discover the finest back pain treatment
-                        options.
-                      </section>
-                    </div>
 
-                    <div>
-                      <section className="orthosec2">
-                        Neck pain, on the other hand, is discomfort occurring
-                        within the cervical vertebrae of the neck. The neck, due
-                        to its location and range of motion, is susceptible to
-                        injury. Its vulnerability stems from its exposed
-                        position.
-                      </section>
-                    </div>
-                  </div>
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image
-                    src={spine}
-                    alt="joint"
-                    className="orthocentered_img"
-                    rounded
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <h1 className="sec_subhead">We Take Care of:</h1>
-              </Row>
-              <Row style={{ margin: "40px 0 104px 0" }}>
-                <Col>
-                  <div style={{ gap: "40px" }}>
-                    <ul>
-                      <li>
-                        <p>Microscopic Incision</p>
-                      </li>
-                      <li>
-                        <p>Minimal or No Blood Loss</p>
-                      </li>
-                      <li>
-                        <p>Immediate Recuperation</p>
-                      </li>
-                      <li>
-                        <p>Minimized Pain Medications</p>
-                      </li>
-                      <li>
-                        <p>Preservation of Spinal Portability</p>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-                <Col>
-                  <div style={{ gap: "40px" }}>
-                    <ul>
-                      <li>
-                        <p>Local Sedation</p>
-                      </li>
-                      <li>
-                        <p>Same Day Medical Procedure</p>
-                      </li>
-                      <li>
-                        <p>High Achievement Rates</p>
-                      </li>
-                      <li>
-                        <p>Improved Quality of Life</p>
-                      </li>
-                      <li>
-                        <p>No Expulsion of Muscle or Bone</p>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <h1 className="sec_subhead">Special Features:</h1>
-              </Row>
-              <Row style={{ margin: "40px 0 104px 0" }}>
-                <Col>
-                  <div style={{ gap: "40px" }}>
-                    <ul>
-                      <li>
-                        <p>Enhance your mobility and move with ease.</p>
-                      </li>
-                      <li>
-                        <p>Improve your fitness and overall physical health.</p>
-                      </li>
-                      <li>
-                        <p>Reduce the need for ongoing medication.</p>
-                      </li>
-
-                      <li>
-                        <p>Boost workplace productivity and focus.</p>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          </div>
           <hr />
           <div className="Orthomain_container">
             <div id="Deformity_Correction_Surgeries" className="sections_div">
@@ -680,6 +543,16 @@ function Orthopaedic() {
                   >
                     <div>
                       <section className="orthosec2">
+                        Bone deformities can result from a variety of factors,
+                        including abnormal growth during childhood or
+                        misalignment during the healing of fractures.
+                        Frequently, these deformities involve combinations of
+                        multiple components, demanding precise correction.
+                      </section>
+                    </div>
+
+                    <div>
+                      <section className="orthosec2">
                         We employ advanced tools like computer software-assisted
                         devices to meticulously plan and execute corrections.
                         Our approach often involves gradual adjustments using
@@ -690,16 +563,6 @@ function Orthopaedic() {
                         six-axis correction principle. This computer-assisted
                         correction method relies on software guidance for
                         precise adjustments.
-                      </section>
-                    </div>
-
-                    <div>
-                      <section className="orthosec2">
-                        Neck pain, on the other hand, is discomfort occurring
-                        within the cervical vertebrae of the neck. The neck, due
-                        to its location and range of motion, is susceptible to
-                        injury. Its vulnerability stems from its exposed
-                        position.
                       </section>
                     </div>
                   </div>
@@ -851,7 +714,7 @@ function Orthopaedic() {
                         better understanding of the principles of Illizarov
                         technique made us use other options of using fixators
                         like other than the ring fixator e.g. Dynamic Uniplanar
-                        Fixators "–" Orthofix, LRS (Limb Reconstruction System),
+                        Fixators – Orthofix, LRS (Limb Reconstruction System),
                         Hexapod fixator (the versatile computer aided six-axis
                         correction system). The method of fixation, the type of
                         fixator their advantages & disadvantages, clinical
@@ -912,7 +775,7 @@ function Orthopaedic() {
           <div className="Orthomain_container">
             <div id="Sports_Medicine&Keyhole_Services" className="sections_div">
               <h1 className="orthosect_heading">
-                Sports Medicine and Keyhole Services
+                Sports Medicine and Arthroscope (Keyhole Services)
               </h1>
               <Row style={{ marginBottom: "52px" }}>
                 <Col xs={12} md={6}>
@@ -925,27 +788,26 @@ function Orthopaedic() {
                   >
                     <div>
                       <section className="orthosec2">
-                        We specialize in the management and prevention of sports
-                        and exercise-related injuries. Our patients range from
-                        elite athletes to individuals aspiring to maintain an
-                        active lifestyle. Our primary objective is to facilitate
-                        our patients' swift return to their favorite sports and
-                        activities while ensuring peak performance.
+                        Specializing in preventing and managing sports-related
+                        injuries, our service caters to diverse clients, from
+                        elite athletes to active individuals. Our focus is on a
+                        swift return to sports, with a dedicated team addressing
+                        musculoskeletal injuries. Operating in a
+                        multidisciplinary framework, our team includes sports
+                        doctors, physiotherapists, and nurse clinicians,
+                        ensuring tailored treatment aligned with individual
+                        needs.
                       </section>
                     </div>
 
                     <div>
                       <section className="orthosec2">
-                        Our Sports Medicine Service comprises a dedicated team
-                        of physicians and arthroscopic surgeons with a passion
-                        for addressing musculoskeletal injuries related to
-                        athletics. We operate within a multidisciplinary
-                        framework that includes sports doctors,
-                        physiotherapists, and nurse clinicians. Each patient
-                        undergoes a comprehensive assessment, and treatment
-                        plans are meticulously customized to meet individual
-                        needs, align with sporting goals, and accommodate
-                        lifestyle preferences.
+                        Your shoulder, comprised of the humerus, scapula, and
+                        clavicle, faces potential issues due to its mobility.
+                        The rotator cuff, a combination of muscles and tendons,
+                        maintains stability but can lead to pain. Whether during
+                        movement or persistently, this pain may be temporary or
+                        require medical attention.
                       </section>
                     </div>
                   </div>
@@ -970,15 +832,29 @@ function Orthopaedic() {
                         <p>Meniscus Surgery</p>
                       </li>
                       <li>
-                        <p>Ligament Constructions</p>
+                        <p>Ligament Reconstructions (ACL, PCL, MCL, and LCL)</p>
                       </li>
                       <li>
-                        <p>Shoulder Key Holes Surgeries</p>
+                        <p>Shoulder Arthroscopic Bankarts Repair </p>
                       </li>
                     </ul>
                   </div>
                 </Col>
-                <Col></Col>
+                <Col>
+                  <div style={{ gap: "40px" }}>
+                    <ul>
+                      <li>
+                        <p>Arthroscopic Slap Repair </p>
+                      </li>
+                      <li>
+                        <p>Remplissage </p>
+                      </li>
+                      <li>
+                        <p>Latarjet</p>
+                      </li>
+                    </ul>
+                  </div>
+                </Col>
               </Row>
               <Row>
                 <h1 className="sec_subhead">Special Features:</h1>
@@ -1011,183 +887,7 @@ function Orthopaedic() {
               </Row>
             </div>
           </div>
-          <hr />
-          <div className="Orthomain_container">
-            <div id="Shoulder_Surgery" className="sections_div">
-              <h1 className="orthosect_heading">Shoulder Surgery</h1>
-              <Row style={{ marginBottom: "52px" }}>
-                <Col xs={12} md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "24px",
-                    }}
-                  >
-                    <div>
-                      <section className="orthosec2">
-                        Your shoulder is made up of three bones: your upper arm
-                        bone (humerus), your shoulder blade (scapula), and your
-                        collarbone (clavicle). The head of your upper arm bone
-                        fits into a rounded socket in your shoulder blade. This
-                        socket is called the glenoid. A combination of muscles
-                        and tendons keeps your arm bone centered in your
-                        shoulder socket. These tissues are called the rotator
-                        cuff. They cover the head of your upper arm bone and
-                        attach it to your shoulder blade.
-                      </section>
-                    </div>
 
-                    <div>
-                      <section className="orthosec2">
-                        Mobility has its price, however, it may lead to
-                        increasing problems with instability or impingement of
-                        the soft tissue or bony structures in your shoulder,
-                        resulting in pain. You may feel pain only when you move
-                        your shoulder, or all the time. The pain may be
-                        temporary, or it may continue and require medical
-                        diagnosis and treatment.
-                      </section>
-                    </div>
-                  </div>
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image
-                    src={shoulder}
-                    alt="joint"
-                    className="orthocentered_img"
-                    rounded
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <h1 className="sec_subhead">We Take Care of:</h1>
-              </Row>
-              <Row style={{ margin: "40px 0 104px 0" }}>
-                <Col>
-                  <div style={{ gap: "40px" }}>
-                    <ul>
-                      <li>
-                        <p>
-                          Tendon inflammation (bursitis or tendinitis) or tendon
-                          tear
-                        </p>
-                      </li>
-                      <li>
-                        <p>Instability</p>
-                      </li>
-                      <li>
-                        <p>Arthritis</p>
-                      </li>
-                      <li>
-                        <p>Fracture (broken bone)</p>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-                <Col></Col>
-              </Row>
-            </div>
-          </div>
-          <hr />
-          <div className="Orthomain_container">
-            <div id="Orthoscope" className="sections_div">
-              <h1 className="orthosect_heading">Orthoscope</h1>
-              <Row style={{ marginBottom: "52px" }}>
-                <Col xs={12} md={6}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "24px",
-                    }}
-                  >
-                    <div>
-                      <section className="orthosec2">
-                        Orthoscope treatment, also known as arthroscopy, is a
-                        minimally invasive surgical procedure used to diagnose
-                        and treat various joint conditions, primarily in
-                        orthopedics. During arthroscopy, a small, specialized
-                        instrument called an arthroscope is inserted into the
-                        joint through small incisions. This arthroscope is
-                        equipped with a camera and light source, allowing the
-                        surgeon to visualize the joint's interior on a monitor
-                        in real-time.
-                      </section>
-                    </div>
-
-                    <div>
-                      <section className="orthosec2">
-                        At Sri Chaitanya Ortho & Eye Hospital, we offer
-                        state-of-the-art Orthoscope Treatment, a minimally
-                        invasive approach to diagnosing and treating a wide
-                        range of joint issues. This innovative procedure can be
-                        used for various joints, including the knee, shoulder,
-                        hip, and more.
-                      </section>
-                    </div>
-                  </div>
-                </Col>
-                <Col xs={12} md={6}>
-                  <Image
-                    src={orthoscope}
-                    alt="joint"
-                    className="orthocentered_img"
-                    rounded
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <h1 className="sec_subhead">Special Features:</h1>
-              </Row>
-              <Row style={{ margin: "40px 0 104px 0" }}>
-                <Col>
-                  <div style={{ gap: "40px" }}>
-                    <ul>
-                      <li>
-                        <p>
-                          Orthoscope treatment involves small incisions,
-                          resulting in less trauma to surrounding tissues,
-                          reduced scarring, and faster recovery compared to
-                          traditional open surgery.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          The arthroscope provides a clear and magnified view of
-                          the joint's interior, allowing for precise diagnosis
-                          of joint conditions such as cartilage damage, ligament
-                          injuries, and inflammation.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Orthoscope treatment enables the surgeon to perform
-                          therapeutic interventions during the same procedure.
-                          This may include repairing torn ligaments, removing
-                          damaged tissue, or addressing joint abnormalities.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Patients typically experience less postoperative pain
-                          and swelling, leading to a quicker return to normal
-                          activities and reduced downtime.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Effective pain management strategies are prioritized
-                          to enhance patient comfort during the recovery period
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          </div>
-          <hr />
           <div className="Orthomain_container">
             <div className="Otherspecs">
               <h1 className="orthospect_heading">Explore Other Specialties</h1>
@@ -1212,7 +912,8 @@ function Orthopaedic() {
                     <div>
                       <h1 className="orthosect_heading">Ophthalmology</h1>
                       <section className="orthosec2">
-                        Your vision is our priority, and we are dedicated to
+                     
+                          Your vision is our priority, and we are dedicated to
                         providing you with world-class eye care services. Our
                         team of highly skilled ophthalmologist and staff is
                         committed to preserving and enhancing your eye health.
@@ -1241,9 +942,9 @@ function Orthopaedic() {
                       gap: "24px",
                     }}
                   >
-                    <div style={{ height: "520px", overflow: "hidden" }}>
+                    <div>
                       <Image
-                        src={neurology}
+                        src={spine}
                         alt="joint"
                         className="orthocentered_img"
                         rounded
@@ -1251,28 +952,25 @@ function Orthopaedic() {
                     </div>
 
                     <div>
-                      <h1 className="orthosect_heading">Neurology</h1>
+                      <h1 className="orthosect_heading">Spine</h1>
                       <section className="orthosec2">
-                        Your neurological well-being is our priority, and our
-                        expert team is committed to providing you with
-                        comprehensive and compassionate care. Whether you seek
-                        evaluations, treatments, or specialized interventions
-                        for neurological conditions, we are here to deliver
-                        exceptional care tailored to your unique needs. Explore
-                        our comprehensive ophthalmology services and discover
-                        how we can help you.
+                      Your spine health is our utmost priority. Our
+                        experienced team is committed to providing personalized
+                        care, whether you need routine spinal examinations,
+                        treatment for spine-related conditions, or surgical
+                        interventions for fixations. Trust us for best spine
+                        care tailored to your individual needs and focused on
+                          enhancing your overall well-being
                       </section>
-                      <div>
-                        <Button
-                          onClick={() => {
-                            navigate("/neurology");
-                          }}
-                          className="service_button1"
-                          variant="outline-dark"
-                        >
-                          View More
-                        </Button>
-                      </div>
+                    </div>
+                    <div>
+                      <Button
+                        onClick={navigateToSpine}
+                        className="service_button1"
+                        variant="outline-dark"
+                      >
+                        View More
+                      </Button>
                     </div>
                   </div>
                 </Col>

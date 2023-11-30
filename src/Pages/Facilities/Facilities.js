@@ -1,11 +1,12 @@
 import React from "react";
 import { Carousel, Col, Image, Row } from "react-bootstrap";
 
-import icu from "../../Assets/Images/final-pics/operation-theatre.JPG";
-import waiting from "../../Assets/Images/final-pics/waiting-hall.JPG";
-import pharmacy from "../../Assets/Images/final-pics/pharmacy.JPG";
-import orroom from "../../Assets/Images/final-pics/orroom.JPG";
-import ward from "../../Assets/Images/final-pics/inpatient-ward.JPG";
+import icu from "../../Assets/Images/final-pics1/emergency.png";
+import waiting from "../../Assets/Images/final-pics1/waitinghall.png";
+import pharmacy from "../../Assets/Images/final-pics1/pharmacy.JPG";
+import orroom from "../../Assets/Images/final-pics1/operation-theatre.JPG";
+import ward from "../../Assets/Images/final-pics1/inpatient-ward.JPG";
+import optic from "../../Assets/Images/final-pics1/opticalstore.jpeg";
 import "./Facilities.css";
 
 function Facilities() {
@@ -20,6 +21,45 @@ function Facilities() {
         controls={false}
         style={{ margin: "5px 5px 0 0" }}
       >
+        <Carousel.Item className="carousel_Cont">
+          <Row>
+            <Col md={5}>
+              <div>
+                <Image
+                  rounded
+                  fluid
+                  className="img-fluid"
+                  src={icu}
+                  alt="ICU at chaitanya hospitals"
+                />
+              </div>
+            </Col>
+            <Col md={7} sm={12}>
+              {" "}
+              {/* Adjust the column size */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-around",
+                  gap: "20px",
+                  padding: "25px",
+                }}
+              >
+                <div>
+                  {" "}
+                  <h2 className="facility_heading">Emergency Care</h2>
+                </div>
+                <div>
+                  <p className="facility_subtext">
+                    Rapid and reliable emergency care services to address your
+                    urgent health needs and effectively.
+                  </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Carousel.Item>
         <Carousel.Item className="carousel_Cont">
           <Row>
             <Col sm={12} md={5}>
@@ -60,6 +100,45 @@ function Facilities() {
             </Col>
           </Row>
         </Carousel.Item>
+        <Carousel.Item className="carousel_Cont">
+          <Row>
+            <Col md={5}>
+              <div>
+                <Image
+                  rounded
+                  fluid
+                  className="img-fluid"
+                  src={ward}
+                  alt="Ward rooms at chaitanya hospitals"
+                />
+              </div>
+            </Col>
+            <Col md={7} sm={12}>
+              {" "}
+              {/* Adjust the column size */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-around",
+                  gap: "20px",
+                  padding: "25px",
+                }}
+              >
+                <div>
+                  {" "}
+                  <h2 className="facility_heading">Inpatient Wards</h2>
+                </div>
+                <div>
+                  <p className="facility_subtext">
+                    Our inpatient wards at provide a safe environment. Our
+                    dedicated team is committed to delivering personalized care.
+                  </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Carousel.Item>
 
         <Carousel.Item className="carousel_Cont">
           <Row>
@@ -92,8 +171,8 @@ function Facilities() {
                 </div>
                 <div>
                   <p className="facility_subtext">
-                    Comfortable and roomy waiting hall, designed with your
-                    well-being in mind with easy access to amenities.
+                    Equipped with advanced technology, ensuring a safe and
+                    efficient environment for surgical procedures.
                   </p>
                 </div>
               </div>
@@ -149,7 +228,7 @@ function Facilities() {
                   rounded
                   fluid
                   className="img-fluid"
-                  src={ward}
+                  src={optic}
                   alt="Ward rooms at chaitanya hospitals"
                 />
               </div>
@@ -168,54 +247,12 @@ function Facilities() {
               >
                 <div>
                   {" "}
-                  <h2 className="facility_heading">Inpatient Wards</h2>
+                  <h2 className="facility_heading">Optical Store</h2>
                 </div>
                 <div>
                   <p className="facility_subtext">
-                    Our Inpatient wards at provide a safe environment. Our
-                    deadicated team is committed to delivering personalized
-                    care.
-                  </p>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Carousel.Item>
-
-        <Carousel.Item className="carousel_Cont">
-          <Row>
-            <Col md={5}>
-              <div>
-                <Image
-                  rounded
-                  fluid
-                  className="img-fluid"
-                  src={icu}
-                  alt="ICU at chaitanya hospitals"
-                />
-              </div>
-            </Col>
-            <Col md={7} sm={12}>
-              {" "}
-              {/* Adjust the column size */}
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-around",
-                  gap: "20px",
-                  padding: "25px",
-                }}
-              >
-                <div>
-                  {" "}
-                  <h2 className="facility_heading">Emergency Care</h2>
-                </div>
-                <div>
-                  <p className="facility_subtext">
-                    Our Inpatient wards at provide a safe environment. Our
-                    deadicated team is committed to delivering personalized
-                    care.
+                    Providing an extensive selection of eyewear and vision
+                    solutions to enhance your visual health and well-being{" "}
                   </p>
                 </div>
               </div>
