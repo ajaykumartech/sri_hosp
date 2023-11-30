@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-
-
+import emailjs from 'emailjs-com';
 import hall from "../../Assets/Images/final-pics/contact2.png";
-import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Image, Row, Toast, ToastContainer } from "react-bootstrap";
 import "./Appointment.css";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -10,6 +9,10 @@ import { Helmet } from "react-helmet";
 import AppointmentImages from "../Appointment-images/AppointmentImages";
 
 function Appointment() {
+  const [show, setShow] = useState(false);
+  const [showB, setShowB] = useState(false);
+  const toggleShow = () => setShow(!show);
+  const toggleShowB = () => setShow(!showB);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -40,6 +43,35 @@ function Appointment() {
     event.preventDefault();
     // You can perform any actions here, e.g., sending the data to a server
     console.log(formData); // Display the form data in the console
+    emailjs.send(
+      'service_vwn9wjq', // Service ID
+      'template_vhd43mi', // Template ID
+      {
+        to_name: 'Chaitanyaorthoeyes.com', // Use the appropriate fields from your template
+        from_name: formData.firstName + ' ' + formData.lastName,
+        phone: formData.phone,
+        email: formData.email,
+        date: formData.date,
+        time: formData.time,
+        specialty: formData.specialty,
+        message: formData.message,
+      },
+      'ggHV2gLLgsw3D2rDn' // User ID
+    )
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        setShow(true);
+        // Optionally, reset the form data after successful submission
+        setFormData({
+          // reset your form fields
+        });
+      })
+      .catch((error) => {
+        setShowB(true);
+        console.error('Email sending failed:', error);
+      });
+ 
+
     setFormData({
       firstName: "",
       lastName: "",
@@ -83,7 +115,33 @@ function Appointment() {
           </p>
         </div>
 
-        <Container fluid>
+        <Container fluid={true}>
+          <ToastContainer position="top-center">
+        <Toast bg="success" show={show} onClose={toggleShow}>
+          <Toast.Header>
+            <img
+              src="holder.js/20x20?text=%20"
+              className="rounded me-2"
+              alt=""
+            />
+            <strong className="me-auto">Form Submitted</strong>
+            <small>just now</small>
+          </Toast.Header>
+          <Toast.Body>Your form has been sent successfully!</Toast.Body>
+        </Toast>
+        <Toast bg="danger" show={showB} onClose={toggleShowB}>
+          <Toast.Header>
+            <img
+              src="holder.js/20x20?text=%20"
+              className="rounded me-2"
+              alt=""
+            />
+            <strong className="me-auto">Form Submission Failed</strong>
+            <small>just now</small>
+          </Toast.Header>
+          <Toast.Body>Your form submission has failed Try Again!</Toast.Body>
+        </Toast>
+        </ToastContainer>
           <Row style={{ padding: "12px"}}>
             <Col sm={12} md={6}>
               <Form onSubmit={handleSubmit}>
@@ -174,14 +232,14 @@ function Appointment() {
                   <Form.Group as={Col} controlId="formGridState">
                     <Form.Select
                       className="Control"
-                      name="speciality"
+                      name="specialty"
                       value={formData.specialty}
                       onChange={handleInputChange}
                       required
                     >
                       <option value="orthopaedics">orthopaedics</option>
                       <option value="opthalmology">opthalmology</option>
-                      <option value="neurology">spine</option>
+                      <option value="spine">spine</option>
                     </Form.Select>
                   </Form.Group>
                 </Row>
@@ -214,12 +272,7 @@ function Appointment() {
               sm={12}
               md={6}
             >
-              {/* <Image
-                className="img-fluid"
-                src={check}
-                alt="varun ortho"
-                style={{ borderRadius: "32px", maxHeight: "973px" }}
-              /> */}
+              
               <AppointmentImages/>
             </Col>
           </Row>
@@ -268,7 +321,7 @@ function Appointment() {
         </Container>
       </div>
       <div className="hallimage-container">
-        <Image src={hall} fluid className="centered-img" />
+        <Image src={hall}  className="centered-img" />
         <div className="centered-text">
           <h2 className="hall_text">Our Commitment to Quality</h2>
           <p className="hall_text_p">

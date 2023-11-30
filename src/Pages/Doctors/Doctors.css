@@ -157,7 +157,7 @@ p {
   }
   .centered_imags {
     margin: 0 auto; /* Horizontally center the image */
-    filter: grayscale(100%);
+   
     transition: filter 0.3s;
     height: 630px;
   }
